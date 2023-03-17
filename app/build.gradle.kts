@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.notdo.aos"
-    compileSdk = 32
+    compileSdk = Versions.COMPILESDK
 
     defaultConfig {
         applicationId = "com.notdo.aos"
-        minSdk = 24
-        targetSdk = 32
+        minSdk = Versions.MINSDK
+        targetSdk = Versions.TARGETSDK
         versionCode = 1
         versionName = "1.0"
 
@@ -30,8 +30,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Versions.JAVAVERSION
+        targetCompatibility = Versions.JAVAVERSION
     }
     kotlinOptions {
         jvmTarget = "1.8"

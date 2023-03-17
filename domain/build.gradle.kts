@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.notdo.domain"
-    compileSdk = 32
+    compileSdk = Versions.COMPILESDK
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 32
+        minSdk = Versions.MINSDK
+        targetSdk = Versions.TARGETSDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -22,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Versions.JAVAVERSION
+        targetCompatibility = Versions.JAVAVERSION
     }
     kotlinOptions {
         jvmTarget = "1.8"
