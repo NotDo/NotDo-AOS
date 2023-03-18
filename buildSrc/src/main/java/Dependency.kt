@@ -16,6 +16,8 @@ object Dependency {
         const val LIFECYCLE_KTX =
             "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE_KTX}"
         const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
+        const val LIFECYCLE_VIEWMODEL =
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_VIEWMODEL}"
     }
 
     object Compose {

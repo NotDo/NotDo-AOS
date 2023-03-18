@@ -18,6 +18,7 @@ object Versions {
 
     const val CORE_KTX = "1.7.0"
     const val LIFECYCLE_KTX = "2.3.1"
+    const val LIFECYCLE_VIEWMODEL = "2.5.1"
     const val APPCOMPAT = "1.6.1"
     const val ANDROID_MATERIAL = "1.8.0"
 
