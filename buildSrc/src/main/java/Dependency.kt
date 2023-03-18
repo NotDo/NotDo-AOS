@@ -3,6 +3,12 @@ object Dependency {
         const val APPLICATION = "com.android.application"
         const val LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
+        const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
+    }
+
+    object Plugins {
+        const val HILT_PLUGIN = "dagger.hilt.android.plugin"
+        const val KAPT = "kotlin-kapt"
     }
 
     object AndroidX {
@@ -21,9 +27,17 @@ object Dependency {
             "androidx.compose.material:material:${Versions.COMPOSE_MATERIAL}"
     }
 
+    object Library {
+        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
+        const val RETROFIT_GSON_CONVERTER =
+            "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+    }
+
     object Google {
         const val ANDROID_MATERIAL =
             "com.google.android.material:material:${Versions.ANDROID_MATERIAL}"
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 
     object Test {

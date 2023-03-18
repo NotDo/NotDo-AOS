@@ -1,6 +1,8 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.HILT_PLUGIN)
+    id(Dependency.Plugins.KAPT)
 }
 
 android {
@@ -38,4 +40,11 @@ dependencies {
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
+
+    //Hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
+    //Retrofit
+    implementation(Dependency.Library.RETROFIT)
 }

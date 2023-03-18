@@ -1,6 +1,8 @@
 plugins {
     id(Dependency.Gradle.APPLICATION)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.HILT_PLUGIN)
+    id(Dependency.Plugins.KAPT)
 }
 
 android {
@@ -62,4 +64,12 @@ dependencies {
     androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
+
+    //Hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
+    //Retrofit
+    implementation(Dependency.Library.RETROFIT)
+    implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
 }

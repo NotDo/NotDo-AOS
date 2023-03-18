@@ -4,6 +4,7 @@ object Versions {
     const val APPLICATION = "7.3.0"
     const val LIBRARY = "7.3.0"
     const val KOTLIN = "1.6.10"
+    const val HILT = "2.44"
 
     const val COMPILESDK = 32
     const val MINSDK = 24
@@ -23,5 +24,7 @@ object Versions {
     const val JUNIT = "4.13.2"
     const val ANDROID_JUNIT = "1.1.5"
     const val ESPRESSO = "3.5.1"
+
+    const val RETROFIT = "2.9.0"
 
 }
