@@ -1,4 +1,4 @@
-package com.notdo.aos.di
+package com.notdo.aos
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

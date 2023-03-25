@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":shared"))
+    implementation(project(":core"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
@@ -44,7 +46,4 @@ dependencies {
     //Hilt
     implementation(Dependency.Google.HILT_ANDROID)
     kapt(Dependency.Google.HILT_ANDROID_COMPILER)
-
-    //Retrofit
-    implementation(Dependency.Library.RETROFIT)
 }

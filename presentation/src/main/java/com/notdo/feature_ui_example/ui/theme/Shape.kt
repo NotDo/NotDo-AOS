@@ -1,4 +1,4 @@
-package com.notdo.aos.ui.theme
+package com.notdo.feature_ui_example.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

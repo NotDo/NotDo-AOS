@@ -1,10 +1,12 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.HILT_PLUGIN)
+    id(Dependency.Plugins.KAPT)
 }
 
 android {
-    namespace = "com.notdo.shared"
+    namespace = "com.notdo.feature_ui_example"
     compileSdk = Versions.COMPILESDK
 
     defaultConfig {
@@ -47,6 +49,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":shared"))
+
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
     implementation(Dependency.Compose.ACTIVITY_COMPOSE)
@@ -60,4 +65,8 @@ dependencies {
     androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
+
+    //Hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
 }

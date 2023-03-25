@@ -38,42 +38,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
-    }
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
-    implementation(project(":data"))
-    implementation(project(":domain"))
-
     implementation(Dependency.AndroidX.CORE_KTX)
-    implementation(Dependency.AndroidX.LIFECYCLE_KTX)
-    implementation(Dependency.Compose.ACTIVITY_COMPOSE)
-    implementation(Dependency.Compose.COMPOSE_UI)
-    implementation(Dependency.Compose.COMPOSE_TOOLING)
-    implementation(Dependency.Compose.COMPOSE_MATERIAL)
-    implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL)
+    implementation(Dependency.AndroidX.APPCOMPAT)
+    implementation(Dependency.Google.ANDROID_MATERIAL)
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
-    androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
-    debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
-    debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
 
     //Hilt
     implementation(Dependency.Google.HILT_ANDROID)
     kapt(Dependency.Google.HILT_ANDROID_COMPILER)
-
-    //Retrofit
-    implementation(Dependency.Library.RETROFIT)
-    implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
 }
