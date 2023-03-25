@@ -16,3 +16,7 @@ rootProject.name = "NotDoAos"
 include ':app'
 include ':domain'
 include ':data'
+include ':core'
+include ':shared'
+include ':di'
+include ':feature-ui-example'
