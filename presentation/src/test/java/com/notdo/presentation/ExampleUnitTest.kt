@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_example
+package com.notdo.presentation
 
 import org.junit.Test
 

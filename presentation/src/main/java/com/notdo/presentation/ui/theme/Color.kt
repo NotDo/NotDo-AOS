@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_example.ui.theme
+package com.notdo.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

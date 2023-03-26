@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.notdo.feature_ui_example"
+    namespace = "com.notdo.presentation"
     compileSdk = Versions.COMPILESDK
 
     defaultConfig {
