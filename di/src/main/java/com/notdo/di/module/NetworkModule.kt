@@ -1,4 +1,4 @@
-package com.notdo.aos.di.module
+package com.notdo.di.module
 
 import dagger.Module
 import dagger.Provides
