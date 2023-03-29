@@ -13,7 +13,13 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/di" />
+            <option value="$PROJECT_DIR$/feature-domain-example" />
+            <option value="$PROJECT_DIR$/feature-ui-example" />
             <option value="$PROJECT_DIR$/navigator" />
+            <option value="$PROJECT_DIR$/util-db" />
+            <option value="$PROJECT_DIR$/util-kotlin" />
+            <option value="$PROJECT_DIR$/util-network" />
+            <option value="$PROJECT_DIR$/util-ui" />
           </set>
         </option>
       </GradleProjectSettings>
