@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":navigator"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)

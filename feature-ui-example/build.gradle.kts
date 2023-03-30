@@ -1,18 +1,21 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Dependency.Gradle.LIBRARY)
+    id(Dependency.Gradle.KOTLIN)
 }
 
 android {
     namespace = "com.notdo.feature_ui_example"
-    compileSdk = 32
+    compileSdk = Versions.COMPILESDK
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 32
+        minSdk = Versions.MINSDK
+        targetSdk = Versions.TARGETSDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -25,20 +28,38 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Versions.JAVAVERSION
+        targetCompatibility = Versions.JAVAVERSION
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Dependency.AndroidX.CORE_KTX)
+    implementation(Dependency.AndroidX.LIFECYCLE_KTX)
+    implementation(Dependency.Compose.ACTIVITY_COMPOSE)
+    implementation(Dependency.Compose.COMPOSE_UI)
+    implementation(Dependency.Compose.COMPOSE_TOOLING)
+    implementation(Dependency.Compose.COMPOSE_MATERIAL)
+    implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL)
+    testImplementation(Dependency.Test.JUNIT)
+    androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
+    androidTestImplementation(Dependency.Test.ESPRESSO)
+    androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
+    debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
+    debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
 }
