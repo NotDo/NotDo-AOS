@@ -106,5 +106,11 @@ class NotDoIcon private constructor(
             drawableId = R.drawable.write_button_ic,
             contentDescription = "write button icon"
         )
+
+        @Stable
+        val CheckBoxIcon = NotDoIcon(
+            drawableId = R.drawable.check_ic,
+            contentDescription = "checkbox check icon"
+        )
     }
 }

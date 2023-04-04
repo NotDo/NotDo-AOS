@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 object NotDoColor {
     val Black = Color(0xFF000000)
     val White = Color(0xFFFFFFFF)
+    val CheckBoxColor = Color(0xFF74E78D)
 
     val Gray500 = Color(0xFF595959)
     val Gray400 = Color(0xFF808080)
