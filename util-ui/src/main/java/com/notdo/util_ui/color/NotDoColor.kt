@@ -13,7 +13,7 @@ object NotDoColor {
     val Gray200 = Color(0xFFD3D3D3)
     val Gray100 = Color(0xFFE5E5E5)
 
-    val Error = Color(0xFFB5B5B5)
+    val Error = Color(0xFFE53535)
     val DimedLayer = Color(0x66000000)
 
     object NotDo {

@@ -90,6 +90,12 @@ class NotDoIcon private constructor(
         )
 
         @Stable
+        val TextVisbleFalseIcon = NotDoIcon(
+            drawableId = R.drawable.text_visible_false_ic,
+            contentDescription = "text visible false icon"
+        )
+
+        @Stable
         val WifiConnectIcon = NotDoIcon(
             drawableId = R.drawable.wifi_connect_ic,
             contentDescription = "wifi connect icon"
