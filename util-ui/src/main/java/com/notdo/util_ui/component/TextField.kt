@@ -35,7 +35,7 @@ fun NotDoTextField(
     onValueChange: (String) -> Unit
 ) {
     var passwordVisible by remember {
-        mutableStateOf(false)
+        mutableStateOf(isPassword)
     }
 
     var hasFocus by remember {
@@ -82,7 +82,7 @@ fun NotDoTextField(
                 lineHeight = 20.sp,
             ),
             maxLines = 5,
-            visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+            visualTransformation = if (passwordVisible) PasswordVisualTransformation() else VisualTransformation.None,
             trailingIcon = {
                 Row {
                     if (text != "") {
@@ -90,18 +90,14 @@ fun NotDoTextField(
                             Image(
                                 painter = painterResource(if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.drawableId else NotDoIcon.TextVisbleTrueIcon.drawableId),
                                 contentDescription = if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.contentDescription else NotDoIcon.TextVisbleTrueIcon.contentDescription,
-                                modifier = Modifier.notDoClickable {
-                                    passwordVisible = !passwordVisible
-                                }
+                                modifier = Modifier.notDoClickable { passwordVisible = !passwordVisible }
                             )
                             Spacer(modifier = Modifier.size(8.dp))
                         }
                         Image(
                             painter = painterResource(NotDoIcon.TextDeleteButtonIcon.drawableId),
                             contentDescription = NotDoIcon.TextDeleteButtonIcon.contentDescription,
-                            modifier = Modifier.notDoClickable {
-                                onValueChange("")
-                            }
+                            modifier = Modifier.notDoClickable { onValueChange("") }
                         )
                         Spacer(modifier = Modifier.size(12.dp))
                     }

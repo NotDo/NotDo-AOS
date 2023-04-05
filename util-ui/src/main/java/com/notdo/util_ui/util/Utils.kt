@@ -10,7 +10,7 @@ object Utils {
     }
 
     fun checkPasswordPatternIsError(password: String): Boolean {
-        val passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@!%*#?&])[A-Za-z\\d@!%*#?&]{8,}\$"
+        val passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@!%*#?&])[A-Za-z\\d@!%*#?&]{8,20}\$"
         val compiledPattern = Pattern.compile(passwordPattern)
         return !compiledPattern.matcher(password).find()
     }
