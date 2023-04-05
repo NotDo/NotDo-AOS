@@ -13,10 +13,10 @@ import com.notdo.util_ui.color.NotDoColor
 
 @OptIn(ExperimentalFoundationApi::class)
 fun Modifier.notDoClickable(
-    onClick: (() -> Unit)?
+    onClick: () -> Unit
 ) = composed {
     combinedClickable(
-        onClick = { if (onClick != null) onClick() },
+        onClick = onClick,
         interactionSource = remember { MutableInteractionSource() },
         indication = rememberRipple(
             radius = 10.dp,
