@@ -2,7 +2,6 @@ package com.notdo.util_ui.component
 
 import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -186,9 +185,7 @@ fun EmailCodeCheckTextField(
                     NotDoFont.Body(
                         text = "0${time / 60}:${if (time % 60 < 10) "0" + (time % 60) else time % 60}",
                         color = NotDoColor.Gray400
-                    ).let {
-                        Log.d("recomposition", "text")
-                    }
+                    )
                     Spacer(modifier = Modifier.size(10.dp))
                     NotDoFont.Body(
                         text = "재전송",
@@ -196,15 +193,13 @@ fun EmailCodeCheckTextField(
                         modifier = Modifier.notDoClickable { onReSendButtonClick() }
                     )
                     Spacer(modifier = Modifier.size(16.dp))
-                }.let {
-                    Log.d("recomposition", "row")
                 }
             }
         )
         Spacer(modifier = Modifier.size(12.dp))
         NotDoFont.Caption2(
             text = if (isError) {
-                if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*인증번호가 일치하지 않습니다."
+                if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*인증번호가 일치하지 않아요."
             } else "",
             color = if (isError) NotDoColor.Error else NotDoColor.Black,
             fontWeight = FontWeight.Medium
