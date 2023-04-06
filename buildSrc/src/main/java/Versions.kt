@@ -15,6 +15,7 @@ object Versions {
     const val COMPOSE = "1.2.0-alpha03"
     const val ACTIVITY_COMPOSE = "1.3.1"
     const val COMPOSE_MATERIAL = "1.1.1"
+    const val COMPOSE_NAV = "2.5.3"
 
     const val CORE_KTX = "1.7.0"
     const val LIFECYCLE_KTX = "2.3.1"

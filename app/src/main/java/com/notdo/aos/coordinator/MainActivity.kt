@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_example
+package com.notdo.aos.coordinator
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
