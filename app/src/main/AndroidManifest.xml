@@ -14,7 +14,7 @@
         android:theme="@style/Theme.NotDoAos"
         tools:targetApi="31">
         <activity
-            android:name=".coordinator.MainActivity"
+            android:name=".navigator.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.NotDoAos">

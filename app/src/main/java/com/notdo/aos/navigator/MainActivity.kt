@@ -1,4 +1,4 @@
-package com.notdo.aos.coordinator
+package com.notdo.aos.navigator
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.notdo.feature_ui_intro.navigator.introNavigation
+import com.notdo.navigator.NotDoRoutes
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
 
             NavHost(
-                navController = navController, startDestination = "INTRO/intro"
+                navController = navController, startDestination = NotDoRoutes.INTRO
             ) {
                 this.introNavigation(navController = navController)
             }
