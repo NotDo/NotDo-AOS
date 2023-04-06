@@ -25,7 +25,7 @@ fun NotDoButton(
             .fillMaxWidth(0.9f)
             .height(50.dp),
         colors = ButtonDefaults.buttonColors(
-            backgroundColor = if (isActivation) NotDoColor.Black else NotDoColor.Gray200,
+            backgroundColor = if (isActivation) NotDoColor.Black else NotDoColor.Gray300,
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(12.dp),

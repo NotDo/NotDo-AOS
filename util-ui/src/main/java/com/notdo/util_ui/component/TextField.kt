@@ -61,7 +61,7 @@ fun NotDoTextField(
                 .clip(RoundedCornerShape(10.dp))
                 .border(
                     1.dp,
-                    if (isError) NotDoColor.Error else if (hasFocus) NotDoColor.Black else NotDoColor.Gray300,
+                    if (isError) NotDoColor.Error else if (hasFocus) NotDoColor.Black else NotDoColor.Gray400,
                     RoundedCornerShape(10.dp)
                 )
                 .onFocusChanged { focusState -> hasFocus = focusState.hasFocus },
@@ -76,7 +76,7 @@ fun NotDoTextField(
                 NotDoFont.Body(
                     text = hintText,
                     fontWeight = FontWeight.Normal,
-                    color = NotDoColor.Gray300
+                    color = NotDoColor.Gray400
                 )
             },
             textStyle = TextStyle(
@@ -149,7 +149,7 @@ fun EmailCodeCheckTextField(
                 .clip(RoundedCornerShape(10.dp))
                 .border(
                     1.dp,
-                    if (isError) NotDoColor.Error else if (hasFocus) NotDoColor.Black else NotDoColor.Gray300,
+                    if (isError) NotDoColor.Error else if (hasFocus) NotDoColor.Black else NotDoColor.Gray400,
                     RoundedCornerShape(10.dp)
                 )
                 .onFocusChanged { focusState -> hasFocus = focusState.hasFocus },
@@ -164,7 +164,7 @@ fun EmailCodeCheckTextField(
                 NotDoFont.Body(
                     text = "4자리 숫자를 입력해 주세요.",
                     fontWeight = FontWeight.Normal,
-                    color = NotDoColor.Gray300
+                    color = NotDoColor.Gray400
                 )
             },
             textStyle = TextStyle(
@@ -188,7 +188,7 @@ fun EmailCodeCheckTextField(
                     Spacer(modifier = Modifier.size(10.dp))
                     NotDoFont.Body(
                         text = "0${time / 60}:${if (time % 60 < 10) "0" + (time % 60) else time % 60}",
-                        color = NotDoColor.Gray400,
+                        color = NotDoColor.Gray500,
                         modifier = Modifier.width(45.dp),
                         textAlign = TextAlign.Center
                     )
