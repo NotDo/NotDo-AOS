@@ -1,6 +1,5 @@
 package com.notdo.util_ui.component
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.notdo.util_ui.color.NotDoColor
@@ -173,7 +173,8 @@ fun EmailCodeCheckTextField(
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true,
             trailingIcon = {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(verticalAlignment = Alignment.CenterVertically)
+                {
                     if (text != "") {
                         Image(
                             painter = painterResource(NotDoIcon.TextDeleteButtonIcon.drawableId),
@@ -184,7 +185,9 @@ fun EmailCodeCheckTextField(
                     Spacer(modifier = Modifier.size(10.dp))
                     NotDoFont.Body(
                         text = "0${time / 60}:${if (time % 60 < 10) "0" + (time % 60) else time % 60}",
-                        color = NotDoColor.Gray400
+                        color = NotDoColor.Gray400,
+                        modifier = Modifier.width(45.dp),
+                        textAlign = TextAlign.Center
                     )
                     Spacer(modifier = Modifier.size(10.dp))
                     NotDoFont.Body(
