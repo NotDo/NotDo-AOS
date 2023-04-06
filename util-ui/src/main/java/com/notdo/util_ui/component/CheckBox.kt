@@ -51,7 +51,7 @@ fun NotDoCheckBox(
                 .width(18.dp)
                 .height(18.dp)
                 .clip(RoundedCornerShape(7.dp))
-                .background(NotDoColor.Gray300)
+                .background(NotDoColor.Gray400)
                 .notDoClickable {
                     isCheck.value = true
                     checkStatus(true)

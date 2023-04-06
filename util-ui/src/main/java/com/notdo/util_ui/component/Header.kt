@@ -91,7 +91,7 @@ fun ScrollHeader(
             drawLine(
                 start = Offset(x = 0f, y = 0f),
                 end = Offset(x = size.width, y = 0f),
-                color = NotDoColor.Gray500
+                color = NotDoColor.Gray600
             )
         }
     }
@@ -130,7 +130,7 @@ fun DiaryHeader(
         ) {
             NotDoFont.Title(
                 text = "완료",
-                color = NotDoColor.Gray400,
+                color = NotDoColor.Gray500,
                 modifier = Modifier.notDoClickable { completeButtonOnClick() })
         }
     }
