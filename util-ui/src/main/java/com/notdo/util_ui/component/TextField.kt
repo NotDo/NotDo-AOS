@@ -140,7 +140,10 @@ fun EmailCodeCheckTextField(
         Spacer(modifier = Modifier.size(10.dp))
         OutlinedTextField(
             value = text,
-            onValueChange = onValueChange,
+            onValueChange = {
+                if (it.length <= 4)
+                    onValueChange(it)
+            },
             modifier = Modifier
                 .fillMaxWidth(0.9f)
                 .clip(RoundedCornerShape(10.dp))
