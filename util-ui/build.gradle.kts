@@ -59,4 +59,6 @@ dependencies {
     androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
+
+    implementation(Dependency.Library.COIL)
 }

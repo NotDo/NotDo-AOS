@@ -48,6 +48,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":util-ui"))
+    implementation(project(":util-kotlin"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)

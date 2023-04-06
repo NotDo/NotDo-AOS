@@ -33,6 +33,7 @@ object Dependency {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val RETROFIT_GSON_CONVERTER =
             "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+        const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
     }
 
     object Google {

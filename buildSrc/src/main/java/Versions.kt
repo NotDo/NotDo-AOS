@@ -27,5 +27,5 @@ object Versions {
     const val ESPRESSO = "3.5.1"
 
     const val RETROFIT = "2.9.0"
-
+    const val COIL = "1.3.2"
 }
