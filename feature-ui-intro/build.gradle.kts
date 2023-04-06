@@ -53,6 +53,7 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_TOOLING)
     implementation(Dependency.Compose.COMPOSE_MATERIAL)
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL)
+    implementation(Dependency.Compose.COMPOSE_NAV)
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
