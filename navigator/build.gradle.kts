@@ -34,7 +34,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature-ui-example"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
