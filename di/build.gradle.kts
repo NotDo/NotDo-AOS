@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature-domain-example"))
     implementation(project(":navigator"))
 
     implementation(Dependency.AndroidX.CORE_KTX)

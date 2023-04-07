@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.notdo.navigator"
+    namespace = "com.notdo.feature_domain_intro"
     compileSdk = Versions.COMPILESDK
 
     defaultConfig {
@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
     implementation(Dependency.Google.ANDROID_MATERIAL)
