@@ -35,6 +35,8 @@ object Dependency {
         const val RETROFIT_GSON_CONVERTER =
             "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
         const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
+        const val ORBIT = "org.orbit-mvi:orbit-viewmodel:${Versions.ORBIT}"
+        const val ORBIT_COMPOSE = "org.orbit-mvi:orbit-compose:${Versions.ORBIT}"
     }
 
     object Google {
@@ -48,6 +50,7 @@ object Dependency {
         const val JUNIT = "junit:junit:${Versions.JUNIT}"
         const val ANDROID_JUNIT = "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"
         const val ESPRESSO = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO}"
+        const val ORBIT_TEST = "org.orbit-mvi:orbit-test:${Versions.ORBIT}"
     }
 
     object ComposeTest {

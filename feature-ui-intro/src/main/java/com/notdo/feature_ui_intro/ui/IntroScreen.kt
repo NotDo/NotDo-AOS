@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_intro
+package com.notdo.feature_ui_intro.ui
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

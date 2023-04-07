@@ -61,4 +61,9 @@ dependencies {
     androidTestImplementation(Dependency.ComposeTest.COMPOSE_TEST)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
+
+    //Orbit
+    implementation(Dependency.Library.ORBIT)
+    implementation(Dependency.Library.ORBIT_COMPOSE)
+    testImplementation(Dependency.Test.ORBIT_TEST)
 }
