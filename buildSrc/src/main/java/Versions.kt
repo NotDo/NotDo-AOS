@@ -29,4 +29,5 @@ object Versions {
 
     const val RETROFIT = "2.9.0"
     const val COIL = "1.3.2"
+    const val ORBIT = "4.6.1"
 }
