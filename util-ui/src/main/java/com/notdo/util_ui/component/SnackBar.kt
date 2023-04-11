@@ -14,12 +14,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.font.NotDoFont
-import com.notdo.util_ui.icon.NotDoIcon
 import kotlinx.coroutines.launch
 
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
-fun NotDoSnackBar(text: String) {
+fun NotDoSnackBar(text: String, iconId: Int, iconDescription: String?) {
 
     val customSnackBarHost: @Composable (SnackbarHostState) -> Unit =
         { snackbarHostState: SnackbarHostState ->
@@ -38,8 +37,8 @@ fun NotDoSnackBar(text: String) {
                 ) {
                     Spacer(modifier = Modifier.size(16.dp))
                     Icon(
-                        painter = painterResource(NotDoIcon.WifiConnectIcon.drawableId),
-                        contentDescription = NotDoIcon.WifiConnectIcon.contentDescription
+                        painter = painterResource(iconId),
+                        contentDescription = iconDescription
                     )
                     Spacer(modifier = Modifier.size(4.dp))
                     NotDoFont.Subtitle(text = text)
