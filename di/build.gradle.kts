@@ -5,6 +5,7 @@ plugins {
     id(Dependency.Plugins.KAPT)
 }
 
+@Suppress("UnstableApiUsage")
 android {
     namespace = "com.notdo.di"
     compileSdk = Versions.COMPILESDK

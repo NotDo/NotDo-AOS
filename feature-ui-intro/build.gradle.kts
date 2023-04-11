@@ -3,6 +3,7 @@ plugins {
     id(Dependency.Gradle.KOTLIN)
 }
 
+@Suppress("UnstableApiUsage")
 android {
     namespace = "com.notdo.feature_ui_intro"
     compileSdk = Versions.COMPILESDK
