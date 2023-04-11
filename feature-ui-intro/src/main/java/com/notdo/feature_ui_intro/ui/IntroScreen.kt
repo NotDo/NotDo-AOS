@@ -3,6 +3,7 @@ package com.notdo.feature_ui_intro.ui
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
+import com.notdo.util_ui.component.NotDoSnackBar
 
 @Composable
 fun IntroScreen(navController: NavController) {
