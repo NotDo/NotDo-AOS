@@ -16,7 +16,7 @@ import com.notdo.util_ui.font.NotDoFont
 @Composable
 fun NotDoButton(
     text: String,
-    isActivation: Boolean,
+    isActivation: Boolean = true,
     onClick: () -> Unit
 ) {
     Button(

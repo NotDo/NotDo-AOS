@@ -3,6 +3,7 @@ plugins {
     id(Dependency.Gradle.KOTLIN)
 }
 
+@Suppress("UnstableApiUsage")
 android {
     namespace = "com.notdo.feature_ui_intro"
     compileSdk = Versions.COMPILESDK
@@ -46,6 +47,7 @@ android {
 
 dependencies {
     implementation(project(":navigator"))
+    implementation(project(":util-ui"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
