@@ -19,7 +19,6 @@ fun Modifier.notDoClickable(
         onClick = onClick,
         interactionSource = remember { MutableInteractionSource() },
         indication = rememberRipple(
-            radius = 10.dp,
             color = NotDoColor.Gray600,
         ).takeIf {
             true
