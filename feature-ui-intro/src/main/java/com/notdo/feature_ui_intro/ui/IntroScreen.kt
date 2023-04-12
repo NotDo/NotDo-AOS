@@ -12,6 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.notdo.feature_ui_intro.R
+import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.NotDoButton
 import com.notdo.util_ui.font.NotDoFont
@@ -47,7 +48,7 @@ fun IntroScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NotDoButton(text = "로그인") {
-
+                navController.navigate(NotDoRoutes.SIGNUP_ROUTE)
             }
             Spacer(modifier = Modifier.size(32.dp))
             Row(modifier = Modifier

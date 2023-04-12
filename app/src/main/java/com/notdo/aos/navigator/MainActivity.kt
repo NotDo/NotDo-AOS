@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.notdo.feature_ui_intro.navigator.introNavigation
+import com.notdo.feature_ui_intro.navigator.introNavigator
 import com.notdo.navigator.NotDoRoutes
 
 class MainActivity : ComponentActivity() {
@@ -15,9 +15,11 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
 
             NavHost(
-                navController = navController, startDestination = NotDoRoutes.INTRO
+                navController = navController, startDestination = NotDoRoutes.INTRO_ROUTE
             ) {
-                this.introNavigation(navController = navController)
+                this.introNavigator(navController = navController)
+
+
             }
         }
     }
