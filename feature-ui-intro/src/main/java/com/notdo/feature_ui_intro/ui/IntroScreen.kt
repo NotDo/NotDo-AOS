@@ -15,7 +15,6 @@ import com.notdo.feature_ui_intro.R
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.NotDoButton
 import com.notdo.util_ui.font.NotDoFont
-import com.notdo.util_ui.illust.NotDoIllust
 import com.notdo.util_ui.modifier.notDoClickable
 
 @Composable
