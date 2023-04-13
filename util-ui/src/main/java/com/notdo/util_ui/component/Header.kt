@@ -135,3 +135,34 @@ fun DiaryHeader(
         }
     }
 }
+
+@Composable
+fun NormalHeader(
+    title: String,
+    onBackPressed: () -> Unit
+) {
+    Box(
+        modifier = Modifier.padding(vertical = 15.dp, horizontal = 15.dp)
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.Start,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Icon(
+                painter = painterResource(NotDoIcon.BackButtonIcon.drawableId),
+                contentDescription = NotDoIcon.BackButtonIcon.contentDescription,
+                modifier = Modifier.notDoClickable { onBackPressed() }
+            )
+        }
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            NotDoFont.Title(
+                text = title,
+                fontWeight = FontWeight.SemiBold
+            )
+        }
+    }
+}
+
