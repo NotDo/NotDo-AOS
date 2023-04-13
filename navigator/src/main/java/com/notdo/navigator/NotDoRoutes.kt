@@ -10,7 +10,6 @@ object NotDoRoutes {
 
     object SignUp {
         const val AGREE_TERMS_SCREEN = "signUp-AGREE_TERMS_SCREEN"
-        const val AGREE_TERMS_DETAIL_SCREEN = "signUp-AGREE_TERMS_DETAIL_SCREEN"
         const val EMAIL_INPUT_SCREEN = "signUp-EMAIL_INPUT_SCREEN"
         const val EMAIL_CODE_CHECK_SCREEN = "signUp-EMAIL_CODE_CHECK_SCREEN"
         const val PASSWORD_INPUT_SCREEN = "signUp-PASSWORD_INPUT_SCREEN"

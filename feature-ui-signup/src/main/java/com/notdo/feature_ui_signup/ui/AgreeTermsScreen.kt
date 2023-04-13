@@ -47,7 +47,7 @@ fun AgreeTermsScreen(navController: NavController) {
                     text = "자세히 보기",
                     color = NotDoColor.Gray500,
                     modifier = Modifier.notDoClickable {
-                        navController.navigate(NotDoRoutes.SignUp.AGREE_TERMS_DETAIL_SCREEN)
+
                     })
             }
         }
