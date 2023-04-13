@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.notdo.feature_ui_intro.navigator.introNavigator
+import com.notdo.feature_ui_signup.navigator.signUpNavigator
 import com.notdo.navigator.NotDoRoutes
 
 class MainActivity : ComponentActivity() {
@@ -17,9 +18,9 @@ class MainActivity : ComponentActivity() {
             NavHost(
                 navController = navController, startDestination = NotDoRoutes.INTRO_ROUTE
             ) {
-                this.introNavigator(navController = navController)
+                introNavigator(navController = navController)
 
-
+                signUpNavigator(navController = navController)
             }
         }
     }
