@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.notdo.feature_ui_signup.ui.AgreeTermsScreen
+import com.notdo.feature_ui_signup.ui.EmailCodeCheckScreen
 import com.notdo.feature_ui_signup.ui.EmailInputScreen
 import com.notdo.navigator.NotDoRoutes
 
@@ -30,7 +31,7 @@ fun NavGraphBuilder.signUpNavigator(
         composable(
             route = NotDoRoutes.SignUp.EMAIL_CODE_CHECK_SCREEN
         ) {
-
+            EmailCodeCheckScreen(navController = navController)
         }
 
         composable(
