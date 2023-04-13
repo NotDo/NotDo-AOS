@@ -13,15 +13,14 @@ import com.notdo.util_ui.color.NotDoColor
 
 @OptIn(ExperimentalFoundationApi::class)
 fun Modifier.notDoClickable(
+    rippleEnabled: Boolean = true,
     onClick: () -> Unit
 ) = composed {
     combinedClickable(
         onClick = onClick,
         interactionSource = remember { MutableInteractionSource() },
         indication = rememberRipple(
-            color = NotDoColor.Gray600,
-        ).takeIf {
-            true
-        }
+            rippleEnabled
+        )
     )
 }

@@ -68,7 +68,7 @@ fun ScrollHeader(
                 Icon(
                     painter = painterResource(NotDoIcon.NotificationButtonIcon.drawableId),
                     contentDescription = NotDoIcon.NotificationButtonIcon.contentDescription,
-                    modifier = Modifier.notDoClickable {
+                    modifier = Modifier.notDoClickable(false) {
                         onClickNotificationIcon()
                     }
                 )
@@ -81,7 +81,7 @@ fun ScrollHeader(
                 Icon(
                     painter = painterResource(NotDoIcon.CategoryButtonIcon.drawableId),
                     contentDescription = NotDoIcon.CategoryButtonIcon.contentDescription,
-                    modifier = Modifier.notDoClickable {
+                    modifier = Modifier.notDoClickable(false) {
                         onClickCategoryIcon()
                     }
                 )
@@ -112,7 +112,7 @@ fun DiaryHeader(
             Icon(
                 painter = painterResource(NotDoIcon.BackButtonIcon.drawableId),
                 contentDescription = NotDoIcon.BackButtonIcon.contentDescription,
-                modifier = Modifier.notDoClickable { onBackPressed() }
+                modifier = Modifier.notDoClickable(false) { onBackPressed() }
             )
         }
         Row(
@@ -151,7 +151,7 @@ fun NormalHeader(
             Icon(
                 painter = painterResource(NotDoIcon.BackButtonIcon.drawableId),
                 contentDescription = NotDoIcon.BackButtonIcon.contentDescription,
-                modifier = Modifier.notDoClickable { onBackPressed() }
+                modifier = Modifier.notDoClickable(false) { onBackPressed() }
             )
         }
         Row(
