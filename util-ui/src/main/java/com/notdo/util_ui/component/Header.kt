@@ -158,9 +158,8 @@ fun NormalHeader(
             horizontalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxWidth()
         ) {
-            NotDoFont.Title(
-                text = title,
-                fontWeight = FontWeight.SemiBold
+            NotDoFont.Hedline2(
+                text = title
             )
         }
     }
