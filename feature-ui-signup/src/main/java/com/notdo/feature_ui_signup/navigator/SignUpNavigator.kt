@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.notdo.feature_ui_signup.ui.AgreeTermsDetailScreen
 import com.notdo.feature_ui_signup.ui.AgreeTermsScreen
 import com.notdo.navigator.NotDoRoutes
 
@@ -23,7 +24,7 @@ fun NavGraphBuilder.signUpNavigator(
         composable(
             route = NotDoRoutes.SignUp.AGREE_TERMS_DETAIL_SCREEN
         ) {
-
+            AgreeTermsDetailScreen(navController = navController)
         }
 
         composable(
