@@ -11,11 +11,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.notdo.feature_ui_intro.R
 import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.NotDoButton
 import com.notdo.util_ui.font.NotDoFont
+import com.notdo.util_ui.illust.NotDoIllust
 import com.notdo.util_ui.modifier.notDoClickable
 
 @Composable
@@ -31,8 +31,8 @@ fun IntroScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.notdo_face),
-                contentDescription = "NotDoIcon"
+                painter = painterResource(NotDoIllust.NotDoFace.drawableId),
+                contentDescription = NotDoIllust.NotDoFace.contentDescription
             )
             Spacer(modifier = Modifier.size(32.dp))
             NotDoFont.Hedline1(
