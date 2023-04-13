@@ -37,7 +37,6 @@ object Dependency {
         const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
         const val ORBIT = "org.orbit-mvi:orbit-viewmodel:${Versions.ORBIT}"
         const val ORBIT_COMPOSE = "org.orbit-mvi:orbit-compose:${Versions.ORBIT}"
-        const val COMPOSE_BOTTOM_SHEET = "com.holix.android:bottomsheetdialog-compose:v1.1.2"
     }
 
     object Google {
