@@ -85,7 +85,7 @@ fun AgreeTermsScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NormalHeader(title = "회원가입") {
-                navController.navigate(NotDoRoutes.INTRO_ROUTE)
+                navController.popBackStack()
             }
             Spacer(modifier = Modifier.fillMaxHeight(0.05f))
             GreetingsNotDoView(text = "낫두가 \n처음이시군요?")
