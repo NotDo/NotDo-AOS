@@ -27,7 +27,6 @@ fun AgreeTermsScreen(navController: NavController) {
     var isAgreeTremsChecked by remember {
         mutableStateOf(false)
     }
-
     val bottomSheetState =
         rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden)
     val coroutineScope = rememberCoroutineScope()
@@ -75,8 +74,6 @@ fun AgreeTermsScreen(navController: NavController) {
                                 "- 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우\n" +
                                 "간혹 입사 지원자에게 회사와 특수관계에 있는 회사(자회사, 계열사 등)에 입사제안을 드릴 수 있으며, 이 경우 반드시 사전에 입사 지원자에게 개별 연락하여 동의 절차를 거친 후 입사 지원서를 해당 회사로 이관합니다."
                     )
-
-
                 }
             }
         },
@@ -119,9 +116,7 @@ fun AgreeTermsScreen(navController: NavController) {
             }
             Column(modifier = Modifier.fillMaxHeight(), verticalArrangement = Arrangement.Bottom) {
                 NotDoButton(text = "다음", isActivation = isAgreeTremsChecked) {
-                    coroutineScope.launch {
-                        bottomSheetState.hide()
-                    }
+                    navController.navigate(NotDoRoutes.SignUp.EMAIL_INPUT_SCREEN)
                 }
                 Spacer(modifier = Modifier.fillMaxHeight(0.1f))
             }
