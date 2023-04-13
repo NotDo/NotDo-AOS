@@ -65,6 +65,7 @@ fun EmailInputScreen(navController: NavController) {
         NotDoButton(text = "다음", isActivation = text != "") {
             isError = text.isEmailPattern()
             if (!isError) {
+                //TODO 이메일 뷰모델에 저장로직
                 navController.navigate(NotDoRoutes.SignUp.EMAIL_CODE_CHECK_SCREEN)
             }
         }

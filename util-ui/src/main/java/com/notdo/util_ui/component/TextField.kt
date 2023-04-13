@@ -94,7 +94,9 @@ fun NotDoTextField(
                             Image(
                                 painter = painterResource(if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.drawableId else NotDoIcon.TextVisbleTrueIcon.drawableId),
                                 contentDescription = if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.contentDescription else NotDoIcon.TextVisbleTrueIcon.contentDescription,
-                                modifier = Modifier.notDoClickable { passwordVisible = !passwordVisible }
+                                modifier = Modifier.notDoClickable {
+                                    passwordVisible = !passwordVisible
+                                }
                             )
                             Spacer(modifier = Modifier.size(8.dp))
                         }
@@ -124,6 +126,7 @@ fun EmailCodeCheckTextField(
     text: String,
     isError: Boolean,
     time: Int,
+    errorMsg: String,
     onReSendButtonClick: () -> Unit,
     onValueChange: (String) -> Unit
 ) {
@@ -205,7 +208,7 @@ fun EmailCodeCheckTextField(
         Spacer(modifier = Modifier.size(12.dp))
         NotDoFont.Caption2(
             text = if (isError) {
-                if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*인증번호가 일치하지 않아요."
+                if (text.isEmpty()) "*텍스트를 입력해 주세요." else errorMsg
             } else "",
             color = if (isError) NotDoColor.Error else NotDoColor.Black,
             fontWeight = FontWeight.Medium
