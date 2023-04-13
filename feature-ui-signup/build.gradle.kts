@@ -68,4 +68,7 @@ dependencies {
     implementation(Dependency.Library.ORBIT)
     implementation(Dependency.Library.ORBIT_COMPOSE)
     testImplementation(Dependency.Test.ORBIT_TEST)
+
+    //Bottom Sheet
+    implementation(Dependency.Library.COMPOSE_BOTTOM_SHEET)
 }
