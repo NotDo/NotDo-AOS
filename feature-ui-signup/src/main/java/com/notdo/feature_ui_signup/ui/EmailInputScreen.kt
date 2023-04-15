@@ -1,5 +1,6 @@
 package com.notdo.feature_ui_signup.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -9,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_kotlin.format.isEmailPattern
+import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.GreetingsNotDoView
 import com.notdo.util_ui.component.NormalHeader
 import com.notdo.util_ui.component.NotDoButton
@@ -27,7 +29,9 @@ fun EmailInputScreen(navController: NavController) {
     }
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(NotDoColor.White),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         NormalHeader(title = "회원가입") {
