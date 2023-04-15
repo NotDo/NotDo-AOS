@@ -59,7 +59,7 @@ fun IntroScreen(navController: NavController) {
                 NotDoFont.Caption1(text = "혹시 낫두가 처음이신가요? ")
                 NotDoFont.Caption1(text = "회원가입", fontWeight = FontWeight.SemiBold)
             }
-            Spacer(modifier = Modifier.size(48.dp))
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         }
     }
 }
