@@ -17,7 +17,7 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun EmailCodeCheckScreen(navController: NavController) {
-    var text by remember {
+    var emailCheckCode by remember {
         mutableStateOf("")
     }
 
@@ -59,7 +59,7 @@ fun EmailCodeCheckScreen(navController: NavController) {
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         Spacer(modifier = Modifier.size(10.dp))
         EmailCodeCheckTextField(
-            text = text,
+            text = emailCheckCode,
             isError = isError,
             time = time,
             errorMsg = errorMsg,
@@ -68,7 +68,7 @@ fun EmailCodeCheckScreen(navController: NavController) {
                 time = 300
             }
         ) {
-            text = it
+            emailCheckCode = it
         }
     }
     Column(
@@ -77,7 +77,7 @@ fun EmailCodeCheckScreen(navController: NavController) {
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        NotDoButton(text = "인증", isActivation = text != "") {
+        NotDoButton(text = "인증", isActivation = emailCheckCode != "") {
             if (!isError) {
                 //TODO 서버통신으로 코드 인증 로직
                 navController.navigate(NotDoRoutes.SignUp.PASSWORD_INPUT_SCREEN)

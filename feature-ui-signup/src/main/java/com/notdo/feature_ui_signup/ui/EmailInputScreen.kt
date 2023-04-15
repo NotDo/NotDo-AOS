@@ -20,7 +20,7 @@ import com.notdo.util_ui.modifier.notDoClickable
 
 @Composable
 fun EmailInputScreen(navController: NavController) {
-    var text by remember {
+    var email by remember {
         mutableStateOf("")
     }
 
@@ -42,13 +42,13 @@ fun EmailInputScreen(navController: NavController) {
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         Spacer(modifier = Modifier.size(10.dp))
         NotDoTextField(
-            text = text,
+            text = email,
             labelText = "이메일",
             hintText = "이메일을 입력해주세요.",
             isError = isError,
             errorMsg = "이메일 형식에 맞게 입력해주세요."
         ) {
-            text = it
+            email = it
         }
     }
     Column(
@@ -66,8 +66,8 @@ fun EmailInputScreen(navController: NavController) {
             NotDoFont.Caption1(text = "로그인 하러가기", fontWeight = FontWeight.SemiBold)
         }
         Spacer(modifier = Modifier.size(24.dp))
-        NotDoButton(text = "다음", isActivation = text != "") {
-            isError = text.isEmailPattern()
+        NotDoButton(text = "다음", isActivation = email != "") {
+            isError = email.isEmailPattern()
             if (!isError) {
                 //TODO 이메일 뷰모델에 저장로직
                 navController.navigate(NotDoRoutes.SignUp.EMAIL_CODE_CHECK_SCREEN)
