@@ -85,6 +85,7 @@ fun EmailCodeCheckScreen(navController: NavController) {
             if (!isError) {
                 //TODO 서버통신으로 코드 인증 로직
                 countDownTimer.cancel()
+                //TODO 코드 틀리면 코드 틀렸다는 에러 메세지 띄우기
                 navController.navigate(NotDoRoutes.SignUp.PASSWORD_INPUT_SCREEN)
             }
         }
