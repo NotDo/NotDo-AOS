@@ -34,7 +34,9 @@ fun AgreeTermsScreen(navController: NavController) {
     ModalBottomSheetLayout(
         sheetContent = {
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.92f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Column(modifier = Modifier.fillMaxWidth(0.9f)) {
@@ -78,7 +80,12 @@ fun AgreeTermsScreen(navController: NavController) {
             }
         },
         sheetState = bottomSheetState,
-        sheetShape = RoundedCornerShape(10.dp)
+        sheetShape = RoundedCornerShape(
+            topStart = 10.dp,
+            topEnd = 10.dp,
+            bottomStart = 0.dp,
+            bottomEnd = 0.dp
+        )
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
