@@ -1,6 +1,7 @@
 package com.notdo.util_ui.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -82,8 +83,7 @@ fun NotDoTextField(
             textStyle = TextStyle(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
+                fontSize = 14.sp
             ),
             maxLines = 5,
             visualTransformation = if (passwordVisible) PasswordVisualTransformation() else VisualTransformation.None,
@@ -94,7 +94,7 @@ fun NotDoTextField(
                             Image(
                                 painter = painterResource(if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.drawableId else NotDoIcon.TextVisbleTrueIcon.drawableId),
                                 contentDescription = if (passwordVisible) NotDoIcon.TextVisbleFalseIcon.contentDescription else NotDoIcon.TextVisbleTrueIcon.contentDescription,
-                                modifier = Modifier.notDoClickable {
+                                modifier = Modifier.notDoClickable(false) {
                                     passwordVisible = !passwordVisible
                                 }
                             )
@@ -103,7 +103,7 @@ fun NotDoTextField(
                         Image(
                             painter = painterResource(NotDoIcon.TextDeleteButtonIcon.drawableId),
                             contentDescription = NotDoIcon.TextDeleteButtonIcon.contentDescription,
-                            modifier = Modifier.notDoClickable { onValueChange("") }
+                            modifier = Modifier.notDoClickable(false) { onValueChange("") }
                         )
                         Spacer(modifier = Modifier.size(12.dp))
                     }
@@ -173,8 +173,7 @@ fun EmailCodeCheckTextField(
             textStyle = TextStyle(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
+                fontSize = 14.sp
             ),
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true,
@@ -185,7 +184,7 @@ fun EmailCodeCheckTextField(
                         Image(
                             painter = painterResource(NotDoIcon.TextDeleteButtonIcon.drawableId),
                             contentDescription = NotDoIcon.TextDeleteButtonIcon.contentDescription,
-                            modifier = Modifier.notDoClickable { onValueChange("") }
+                            modifier = Modifier.notDoClickable(false) { onValueChange("") }
                         )
                     }
                     Spacer(modifier = Modifier.size(10.dp))
@@ -199,7 +198,7 @@ fun EmailCodeCheckTextField(
                     NotDoFont.Body(
                         text = "재전송",
                         color = NotDoColor.Black,
-                        modifier = Modifier.notDoClickable { onReSendButtonClick() }
+                        modifier = Modifier.notDoClickable(false) { onReSendButtonClick() }
                     )
                     Spacer(modifier = Modifier.size(16.dp))
                 }
