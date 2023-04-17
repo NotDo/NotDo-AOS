@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.notdo.feature_ui_intro.navigator.introNavigator
+import com.notdo.feature_ui_signin.navigator.signInNavigator
 import com.notdo.feature_ui_signup.navigator.signUpNavigator
 import com.notdo.navigator.NotDoRoutes
 
@@ -22,6 +23,8 @@ class MainActivity : ComponentActivity() {
                 introNavigator(navController = navController)
 
                 signUpNavigator(navController = navController)
+
+                signInNavigator(navController = navController)
             }
         }
     }

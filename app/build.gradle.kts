@@ -56,6 +56,7 @@ dependencies {
     implementation(project(":navigator"))
     implementation(project(":feature-ui-intro"))
     implementation(project(":feature-ui-signup"))
+    implementation(project(":feature-ui-signin"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
