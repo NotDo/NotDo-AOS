@@ -12,7 +12,7 @@ object Versions {
 
     val JAVAVERSION = JavaVersion.VERSION_1_8
 
-    const val COMPOSE = "1.2.0-alpha03"
+    const val COMPOSE = "1.2.0"
     const val ACTIVITY_COMPOSE = "1.3.1"
     const val COMPOSE_MATERIAL = "1.1.1"
     const val COMPOSE_NAV = "2.5.3"
