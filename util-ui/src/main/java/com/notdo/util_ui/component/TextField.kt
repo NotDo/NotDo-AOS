@@ -36,7 +36,7 @@ import com.notdo.util_ui.modifier.notDoClickable
 fun NotDoTextField(
     text: String,
     labelText: String = "",
-    errorMsg: String = "",
+    errorMsg: String? = "",
     hintText: String = "",
     isPassword: Boolean = false,
     isError: Boolean = false,
@@ -122,13 +122,15 @@ fun NotDoTextField(
             }
         )
         Spacer(modifier = Modifier.size(12.dp))
-        NotDoFont.Caption2(
-            text = if (isError) {
-                if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*$errorMsg"
-            } else "",
-            color = if (isError) NotDoColor.Error else NotDoColor.Black,
-            fontWeight = FontWeight.Medium
-        )
+        if (errorMsg != null) {
+            NotDoFont.Caption2(
+                text = if (isError) {
+                    if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*$errorMsg"
+                } else "",
+                color = if (isError) NotDoColor.Error else NotDoColor.Black,
+                fontWeight = FontWeight.Medium
+            )
+        }
     }
 }
 
