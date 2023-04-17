@@ -72,5 +72,11 @@ class NotDoIllust private constructor(
             drawableId = R.drawable.angry_notdo_illust,
             contentDescription = "angry notdo illust"
         )
+
+        @Stable
+        val NotDoFace = NotDoIllust(
+            drawableId = R.drawable.notdo_face,
+            contentDescription = "notdo face illust"
+        )
     }
 }

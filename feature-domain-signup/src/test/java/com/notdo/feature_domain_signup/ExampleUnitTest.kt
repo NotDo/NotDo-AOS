@@ -1,7 +1,8 @@
-package com.notdo.feature_ui_intro
+package com.notdo.feature_domain_signup
 
-import org.junit.Assert.assertEquals
 import org.junit.Test
+
+import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).

@@ -11,10 +11,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.notdo.feature_ui_intro.R
+import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.NotDoButton
 import com.notdo.util_ui.font.NotDoFont
+import com.notdo.util_ui.illust.NotDoIllust
 import com.notdo.util_ui.modifier.notDoClickable
 
 @Composable
@@ -30,8 +31,8 @@ fun IntroScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.notdo_face),
-                contentDescription = "NotDoIcon"
+                painter = painterResource(NotDoIllust.NotDoFace.drawableId),
+                contentDescription = NotDoIllust.NotDoFace.contentDescription
             )
             Spacer(modifier = Modifier.size(32.dp))
             NotDoFont.Hedline1(
@@ -47,18 +48,18 @@ fun IntroScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NotDoButton(text = "로그인") {
-
+                //TODO 로그인 페이지 이동로직
             }
             Spacer(modifier = Modifier.size(32.dp))
             Row(modifier = Modifier
                 .notDoClickable {
-
+                    navController.navigate(NotDoRoutes.SIGNUP_ROUTE)
                 }
             ) {
                 NotDoFont.Caption1(text = "혹시 낫두가 처음이신가요? ")
                 NotDoFont.Caption1(text = "회원가입", fontWeight = FontWeight.SemiBold)
             }
-            Spacer(modifier = Modifier.size(48.dp))
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         }
     }
 }

@@ -68,7 +68,7 @@ fun ScrollHeader(
                 Icon(
                     painter = painterResource(NotDoIcon.NotificationButtonIcon.drawableId),
                     contentDescription = NotDoIcon.NotificationButtonIcon.contentDescription,
-                    modifier = Modifier.notDoClickable {
+                    modifier = Modifier.notDoClickable(false) {
                         onClickNotificationIcon()
                     }
                 )
@@ -81,7 +81,7 @@ fun ScrollHeader(
                 Icon(
                     painter = painterResource(NotDoIcon.CategoryButtonIcon.drawableId),
                     contentDescription = NotDoIcon.CategoryButtonIcon.contentDescription,
-                    modifier = Modifier.notDoClickable {
+                    modifier = Modifier.notDoClickable(false) {
                         onClickCategoryIcon()
                     }
                 )
@@ -112,7 +112,7 @@ fun DiaryHeader(
             Icon(
                 painter = painterResource(NotDoIcon.BackButtonIcon.drawableId),
                 contentDescription = NotDoIcon.BackButtonIcon.contentDescription,
-                modifier = Modifier.notDoClickable { onBackPressed() }
+                modifier = Modifier.notDoClickable(false) { onBackPressed() }
             )
         }
         Row(
@@ -135,3 +135,33 @@ fun DiaryHeader(
         }
     }
 }
+
+@Composable
+fun NormalHeader(
+    title: String,
+    onBackPressed: () -> Unit
+) {
+    Box(
+        modifier = Modifier.padding(vertical = 15.dp, horizontal = 15.dp)
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.Start,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Icon(
+                painter = painterResource(NotDoIcon.BackButtonIcon.drawableId),
+                contentDescription = NotDoIcon.BackButtonIcon.contentDescription,
+                modifier = Modifier.notDoClickable(false) { onBackPressed() }
+            )
+        }
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            NotDoFont.Hedline2(
+                text = title
+            )
+        }
+    }
+}
+
