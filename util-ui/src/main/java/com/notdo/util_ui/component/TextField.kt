@@ -14,7 +14,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.ExperimentalTextApi
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -152,6 +151,7 @@ fun EmailCodeCheckTextField(
             },
             modifier = Modifier
                 .fillMaxWidth(0.9f)
+                .height(48.dp)
                 .clip(RoundedCornerShape(10.dp))
                 .border(
                     1.dp,
