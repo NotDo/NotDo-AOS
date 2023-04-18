@@ -1,26 +1,19 @@
 plugins {
-    id(Dependency.Gradle.APPLICATION)
+    id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
-    id(Dependency.Plugins.HILT_PLUGIN)
-    id(Dependency.Plugins.KAPT)
 }
 
 @Suppress("UnstableApiUsage")
 android {
-    namespace = "com.notdo.aos"
+    namespace = "com.notdo.feature_ui_signin"
     compileSdk = Versions.COMPILESDK
 
     defaultConfig {
-        applicationId = "com.notdo.aos"
         minSdk = Versions.MINSDK
         targetSdk = Versions.TARGETSDK
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -54,9 +47,8 @@ android {
 
 dependencies {
     implementation(project(":navigator"))
-    implementation(project(":feature-ui-intro"))
-    implementation(project(":feature-ui-signup"))
-    implementation(project(":feature-ui-signin"))
+    implementation(project(":util-ui"))
+    implementation(project(":util-kotlin"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
@@ -64,8 +56,8 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_UI)
     implementation(Dependency.Compose.COMPOSE_TOOLING)
     implementation(Dependency.Compose.COMPOSE_MATERIAL)
-    implementation(Dependency.Compose.COMPOSE_NAV)
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL)
+    implementation(Dependency.Compose.COMPOSE_NAV)
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
@@ -73,7 +65,8 @@ dependencies {
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TOOLING)
     debugImplementation(Dependency.ComposeTest.DEBUG_COMPOSE_TEST)
 
-    //Hilt
-    implementation(Dependency.Google.HILT_ANDROID)
-    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+    //Orbit
+    implementation(Dependency.Library.ORBIT)
+    implementation(Dependency.Library.ORBIT_COMPOSE)
+    testImplementation(Dependency.Test.ORBIT_TEST)
 }

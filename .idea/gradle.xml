@@ -7,6 +7,7 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="Embedded JDK" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -14,8 +15,10 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/di" />
             <option value="$PROJECT_DIR$/feature-domain-intro" />
+            <option value="$PROJECT_DIR$/feature-domain-signin" />
             <option value="$PROJECT_DIR$/feature-domain-signup" />
             <option value="$PROJECT_DIR$/feature-ui-intro" />
+            <option value="$PROJECT_DIR$/feature-ui-signin" />
             <option value="$PROJECT_DIR$/feature-ui-signup" />
             <option value="$PROJECT_DIR$/navigator" />
             <option value="$PROJECT_DIR$/util-db" />

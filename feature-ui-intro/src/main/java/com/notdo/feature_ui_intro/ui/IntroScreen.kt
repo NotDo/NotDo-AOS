@@ -48,7 +48,7 @@ fun IntroScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NotDoButton(text = "로그인") {
-                //TODO 로그인 페이지 이동로직
+                navController.navigate(NotDoRoutes.SIGNIN_ROUTE)
             }
             Spacer(modifier = Modifier.size(32.dp))
             Row(modifier = Modifier

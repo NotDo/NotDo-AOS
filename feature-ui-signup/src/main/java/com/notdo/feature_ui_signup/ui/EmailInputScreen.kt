@@ -59,7 +59,7 @@ fun EmailInputScreen(navController: NavController) {
     ) {
         Row(modifier = Modifier
             .notDoClickable {
-                //TODO 로그인으로 이동 로직 작성
+                navController.navigate(NotDoRoutes.SIGNIN_ROUTE)
             }
         ) {
             NotDoFont.Caption1(text = "이미 낫두 회원이신가요? ")

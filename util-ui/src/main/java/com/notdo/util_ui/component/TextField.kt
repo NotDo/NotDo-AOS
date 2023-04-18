@@ -15,13 +15,11 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.ExperimentalTextApi
-import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,12 +29,11 @@ import com.notdo.util_ui.font.pretendardFamily
 import com.notdo.util_ui.icon.NotDoIcon
 import com.notdo.util_ui.modifier.notDoClickable
 
-@OptIn(ExperimentalTextApi::class)
 @Composable
 fun NotDoTextField(
     text: String,
     labelText: String = "",
-    errorMsg: String = "",
+    errorMsg: String? = "",
     hintText: String = "",
     isPassword: Boolean = false,
     isError: Boolean = false,
@@ -87,16 +84,9 @@ fun NotDoTextField(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
-                lineHeight = 20.sp,
-                platformStyle = PlatformTextStyle(
-                    includeFontPadding = false
-                ),
-                lineHeightStyle = LineHeightStyle(
-                    alignment = LineHeightStyle.Alignment.Bottom,
-                    trim = LineHeightStyle.Trim.None
-                )
+                lineHeight = 20.sp
             ),
-            maxLines = 5,
+            singleLine = true,
             visualTransformation = if (passwordVisible) PasswordVisualTransformation() else VisualTransformation.None,
             trailingIcon = {
                 Row {
@@ -121,18 +111,19 @@ fun NotDoTextField(
                 }
             }
         )
-        Spacer(modifier = Modifier.size(12.dp))
-        NotDoFont.Caption2(
-            text = if (isError) {
-                if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*$errorMsg"
-            } else "",
-            color = if (isError) NotDoColor.Error else NotDoColor.Black,
-            fontWeight = FontWeight.Medium
-        )
+        if (errorMsg != null) {
+            Spacer(modifier = Modifier.size(12.dp))
+            NotDoFont.Caption2(
+                text = if (isError) {
+                    if (text.isEmpty()) "*텍스트를 입력해 주세요." else "*$errorMsg"
+                } else "",
+                color = if (isError) NotDoColor.Error else NotDoColor.Black,
+                fontWeight = FontWeight.Medium
+            )
+        }
     }
 }
 
-@OptIn(ExperimentalTextApi::class)
 @Composable
 fun EmailCodeCheckTextField(
     text: String,
@@ -186,14 +177,7 @@ fun EmailCodeCheckTextField(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
-                lineHeight = 20.sp,
-                platformStyle = PlatformTextStyle(
-                    includeFontPadding = false
-                ),
-                lineHeightStyle = LineHeightStyle(
-                    alignment = LineHeightStyle.Alignment.Bottom,
-                    trim = LineHeightStyle.Trim.None
-                )
+                lineHeight = 20.sp
             ),
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true,

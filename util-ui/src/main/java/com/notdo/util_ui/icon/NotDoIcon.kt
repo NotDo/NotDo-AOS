@@ -118,5 +118,11 @@ class NotDoIcon private constructor(
             drawableId = R.drawable.check_ic,
             contentDescription = "checkbox check icon"
         )
+
+        @Stable
+        val ArrowGoIcon = NotDoIcon(
+            drawableId = R.drawable.arrow_go_ic,
+            contentDescription = "arrow go icon"
+        )
     }
 }
