@@ -65,6 +65,7 @@ fun SignInScreen(
         ) {
             email = it
         }
+        Spacer(modifier = Modifier.size(24.dp))
         NotDoTextField(
             text = password,
             isPassword = true,
@@ -75,6 +76,7 @@ fun SignInScreen(
         ) {
             password = it
         }
+        Spacer(modifier = Modifier.size(16.dp))
         Box(
             modifier = Modifier
                 .fillMaxWidth(0.9f)
@@ -106,7 +108,7 @@ fun SignInScreen(
         Spacer(modifier = Modifier.size(24.dp))
         NotDoButton(text = "다음", isActivation = email != "" && password != "") {
             //TODO 로그인 요청 성공시 메인으로 이동로직
-            //TODO 로그인 실패시 그거에 맞게 에러처리
+            //TODO 로그인 실패시 그거에 맞게 에러처
             //TODO 로그인 요청
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.06f))
