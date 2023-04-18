@@ -7,6 +7,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.notdo.util_ui.color.NotDoColor
@@ -22,11 +23,11 @@ import com.notdo.util_ui.modifier.notDoClickable
 fun SignInScreen(
     navController: NavController
 ) {
-    var password by remember {
+    var email by remember {
         mutableStateOf("")
     }
 
-    var reInputPassword by remember {
+    var password by remember {
         mutableStateOf("")
     }
 
@@ -34,8 +35,12 @@ fun SignInScreen(
         mutableStateOf(false)
     }
 
-    var isReInputPasswordError by remember {
+    var isPasswordError by remember {
         mutableStateOf(false)
+    }
+
+    var errorMsg by remember {
+        mutableStateOf("")
     }
 
     Column(
@@ -52,23 +57,23 @@ fun SignInScreen(
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         Spacer(modifier = Modifier.size(10.dp))
         NotDoTextField(
-            text = password,
+            text = email,
             labelText = "이메일",
             hintText = "가입하신 이메일을 입력해주세요.",
             isError = isEmailError,
             errorMsg = null
         ) {
-            password = it
+            email = it
         }
         NotDoTextField(
-            text = reInputPassword,
+            text = password,
             isPassword = true,
             labelText = "비밀번호",
             hintText = "가입하신 비밀번호를 입력해주세요.",
-            isError = isReInputPasswordError,
+            isError = isPasswordError,
             errorMsg = null
         ) {
-            reInputPassword = it
+            password = it
         }
         Box(
             modifier = Modifier
@@ -93,8 +98,15 @@ fun SignInScreen(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        NotDoButton(text = "다음", isActivation = password != "" && reInputPassword != "") {
+        NotDoFont.Caption2(
+            text = errorMsg,
+            color = NotDoColor.Error,
+            fontWeight = FontWeight.Medium
+        )
+        Spacer(modifier = Modifier.size(24.dp))
+        NotDoButton(text = "다음", isActivation = email != "" && password != "") {
             //TODO 로그인 요청 성공시 메인으로 이동로직
+            //TODO 로그인 실패시 그거에 맞게 에러처리
             //TODO 로그인 요청
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.06f))
