@@ -4,6 +4,7 @@ object NotDoRoutes {
     const val INTRO_ROUTE = "intro"
     const val SIGNUP_ROUTE = "signUp"
     const val SIGNIN_ROUTE = "signIn"
+    const val MAIN_ROUTE = "main"
 
     object Intro {
         const val MAIN_SCREEN = "intro-MAIN_SCREEN"
@@ -19,5 +20,9 @@ object NotDoRoutes {
     object SignIn {
         const val SIGNIN_SCREEN = "signIn-SIGNIN_SCREEN"
         const val FIND_PASSWORD_SCREEN = "signIn-FIND_PASSWORD_SCREEN"
+    }
+
+    object Main {
+        const val MAIN_SCREEN = "main-MAIN_SCREEN"
     }
 }
