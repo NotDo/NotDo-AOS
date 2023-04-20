@@ -15,9 +15,11 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/di" />
             <option value="$PROJECT_DIR$/feature-domain-intro" />
+            <option value="$PROJECT_DIR$/feature-domain-main" />
             <option value="$PROJECT_DIR$/feature-domain-signin" />
             <option value="$PROJECT_DIR$/feature-domain-signup" />
             <option value="$PROJECT_DIR$/feature-ui-intro" />
+            <option value="$PROJECT_DIR$/feature-ui-main" />
             <option value="$PROJECT_DIR$/feature-ui-signin" />
             <option value="$PROJECT_DIR$/feature-ui-signup" />
             <option value="$PROJECT_DIR$/navigator" />
