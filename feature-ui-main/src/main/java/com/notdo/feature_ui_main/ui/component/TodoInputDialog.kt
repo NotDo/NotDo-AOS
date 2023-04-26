@@ -26,7 +26,7 @@ fun TodoInputDialog(
 
     if (visible) {
         Dialog(
-            onDismissRequest = { onDismissRequest() },
+            onDismissRequest = {},
             properties = DialogProperties(usePlatformDefaultWidth = false)
         ) {
             Column(
@@ -37,8 +37,8 @@ fun TodoInputDialog(
                     .background(NotDoColor.White),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                DialogComponent(text = text) {
-                    text = it
+                DialogComponent(text = text, onValueCange = { text = it }) {
+                    onDismissRequest()
                 }
             }
         }

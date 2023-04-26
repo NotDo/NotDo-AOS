@@ -15,7 +15,7 @@ import com.notdo.util_ui.font.NotDoFont
 import com.notdo.util_ui.illust.NotDoIllust
 
 @Composable
-fun DialogComponent(text: String, onValueCange: (String) -> Unit) {
+fun DialogComponent(text: String, onValueCange: (String) -> Unit, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth(0.9f)
@@ -59,7 +59,7 @@ fun DialogComponent(text: String, onValueCange: (String) -> Unit) {
         }
         Spacer(modifier = Modifier.size(16.dp))
         NotDoButton(text = "작성", isActivation = text != "") {
-            //TODO 작성한 투두 로컬에 저장하는 로직
+            onClick()
         }
         Spacer(modifier = Modifier.size(40.dp))
     }
