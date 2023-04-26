@@ -18,7 +18,7 @@ import com.notdo.util_ui.color.NotDoColor
 @Composable
 fun TodoInputDialog(
     visible: Boolean,
-    onDismissRequest: () -> Unit,
+    onClick: () -> Unit,
 ) {
     var text by remember {
         mutableStateOf("")
@@ -38,7 +38,7 @@ fun TodoInputDialog(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 DialogComponent(text = text, onValueCange = { text = it }) {
-                    onDismissRequest()
+                    onClick()
                 }
             }
         }

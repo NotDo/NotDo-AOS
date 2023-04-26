@@ -22,6 +22,7 @@ fun MainScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         TodoInputDialog(visible = visible) {
+            //TODO 로컬 저장 로직
             visible = false
         }
     }
