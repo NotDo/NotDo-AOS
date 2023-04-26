@@ -32,7 +32,7 @@ import com.notdo.util_ui.modifier.notDoClickable
 fun NotDoTextField(
     text: String,
     labelText: String = "",
-    errorMsg: String? = "",
+    errorMsg: String? = null,
     hintText: String = "",
     isPassword: Boolean = false,
     isError: Boolean = false,
@@ -46,7 +46,7 @@ fun NotDoTextField(
         mutableStateOf(false)
     }
 
-    Column(modifier = Modifier.wrapContentSize()) {
+    Column {
         NotDoFont.Caption2(
             text = labelText,
             color = NotDoColor.Black,
