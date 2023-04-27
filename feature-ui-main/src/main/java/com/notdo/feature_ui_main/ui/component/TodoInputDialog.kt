@@ -32,7 +32,7 @@ fun TodoInputDialog(
             Column(
                 modifier = Modifier
                     .fillMaxWidth(0.9f)
-                    .height(415.dp)
+                    .fillMaxHeight(0.51f)
                     .clip(RoundedCornerShape(10.dp))
                     .background(NotDoColor.White),
                 horizontalAlignment = Alignment.CenterHorizontally

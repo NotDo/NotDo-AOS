@@ -16,51 +16,55 @@ import com.notdo.util_ui.illust.NotDoIllust
 
 @Composable
 fun DialogComponent(text: String, onValueCange: (String) -> Unit, onClick: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth(0.9f)
-    ) {
-        Spacer(modifier = Modifier.size(40.dp))
-        Box(modifier = Modifier.fillMaxWidth()) {
-            Image(
-                painter = painterResource(id = NotDoIllust.NotDoFace.drawableId),
-                contentDescription = NotDoIllust.NotDoFace.contentDescription,
-                modifier = Modifier
-                    .width(64.dp)
-                    .height(18.dp)
+    Box {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight()
+                .align(Alignment.Center),
+        ) {
+            Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+            Box(modifier = Modifier.fillMaxWidth()) {
+                Image(
+                    painter = painterResource(id = NotDoIllust.NotDoFace.drawableId),
+                    contentDescription = NotDoIllust.NotDoFace.contentDescription,
+                    modifier = Modifier
+                        .width(64.dp)
+                        .height(18.dp)
+                )
+            }
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+            NotDoFont.Hedline2(
+                text = "이루고 싶은 목표를\n적어주세요.",
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.fillMaxHeight(0.08f))
+            NotDoFont.Caption1(
+                text = "반복 설정하기",
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.fillMaxHeight(0.02f))
+            NotDoFont.Caption2(
+                text = "나의 목표 목록 옆에 버튼을 눌러\n반복 설정을 누르면 설정되요.",
+                color = NotDoColor.Gray500,
+                modifier = Modifier.fillMaxWidth()
             )
         }
-        Spacer(modifier = Modifier.size(20.dp))
-        NotDoFont.Hedline1(
-            text = "이루고 싶은 목표를\n적어주세요.",
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.size(32.dp))
-        NotDoFont.Caption1(
-            text = "반복 설정하기",
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.size(8.dp))
-        NotDoFont.Caption2(
-            text = "나의 목표 목록 옆에 버튼을 눌러\n반복 설정을 누르면 설정되요.",
-            color = NotDoColor.Gray500,
-            modifier = Modifier.fillMaxWidth()
-        )
-    }
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        NotDoTextField(text = text, hintText = "ex) 토익 990점 달성") {
-            onValueCange(it)
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom
+        ) {
+            NotDoTextField(text = text, hintText = "ex) 토익 990점 달성") {
+                onValueCange(it)
+            }
+            Spacer(modifier = Modifier.fillMaxHeight(0.04f))
+            NotDoButton(text = "작성", isActivation = text != "") {
+                onClick()
+            }
+            Spacer(modifier = Modifier.fillMaxHeight(0.1f))
         }
-        Spacer(modifier = Modifier.size(16.dp))
-        NotDoButton(text = "작성", isActivation = text != "") {
-            onClick()
-        }
-        Spacer(modifier = Modifier.size(40.dp))
     }
 }
