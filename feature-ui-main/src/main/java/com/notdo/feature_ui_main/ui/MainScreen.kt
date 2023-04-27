@@ -1,10 +1,29 @@
 package com.notdo.feature_ui_main.ui
 
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import com.notdo.feature_ui_main.ui.component.TodoInputDialog
 
 @Composable
 fun MainScreen(navController: NavController) {
-    Text("메인페이지")
+    var visible by remember {
+        mutableStateOf(true)
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        TodoInputDialog(visible = visible) {
+            //TODO 로컬 저장 로직
+            visible = false
+        }
+    }
 }

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -14,11 +15,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.ExperimentalTextApi
+import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,11 +32,12 @@ import com.notdo.util_ui.font.pretendardFamily
 import com.notdo.util_ui.icon.NotDoIcon
 import com.notdo.util_ui.modifier.notDoClickable
 
+@OptIn(ExperimentalTextApi::class)
 @Composable
 fun NotDoTextField(
     text: String,
     labelText: String = "",
-    errorMsg: String? = "",
+    errorMsg: String? = null,
     hintText: String = "",
     isPassword: Boolean = false,
     isError: Boolean = false,
@@ -46,7 +51,7 @@ fun NotDoTextField(
         mutableStateOf(false)
     }
 
-    Column(modifier = Modifier.wrapContentSize()) {
+    Column {
         NotDoFont.Caption2(
             text = labelText,
             color = NotDoColor.Black,
@@ -58,6 +63,7 @@ fun NotDoTextField(
             onValueChange = onValueChange,
             modifier = Modifier
                 .fillMaxWidth(0.9f)
+                .height(48.dp)
                 .clip(RoundedCornerShape(10.dp))
                 .border(
                     1.dp,
@@ -73,17 +79,36 @@ fun NotDoTextField(
                 errorBorderColor = Color.Transparent
             ),
             placeholder = {
-                NotDoFont.Body(
+                Text(
                     text = hintText,
-                    fontWeight = FontWeight.Normal,
-                    color = NotDoColor.Gray400
+                    style = TextStyle(
+                        fontFamily = pretendardFamily,
+                        fontWeight = FontWeight.Normal,
+                        color = NotDoColor.Gray500,
+                        fontSize = 14.sp,
+                        lineHeight = 20.sp,
+                        lineHeightStyle = LineHeightStyle(
+                            alignment = LineHeightStyle.Alignment.Center,
+                            trim = LineHeightStyle.Trim.FirstLineTop
+                        ),
+                        platformStyle = PlatformTextStyle(
+                            false
+                        )
+                    )
                 )
             },
             textStyle = TextStyle(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
-                lineHeight = 20.sp
+                lineHeight = 20.sp,
+                lineHeightStyle = LineHeightStyle(
+                    alignment = LineHeightStyle.Alignment.Center,
+                    trim = LineHeightStyle.Trim.FirstLineTop
+                ),
+                platformStyle = PlatformTextStyle(
+                    false
+                )
             ),
             singleLine = true,
             visualTransformation = if (passwordVisible) PasswordVisualTransformation() else VisualTransformation.None,
