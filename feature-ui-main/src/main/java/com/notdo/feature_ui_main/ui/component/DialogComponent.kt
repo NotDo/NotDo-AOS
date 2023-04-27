@@ -47,7 +47,7 @@ fun DialogComponent(text: String, onValueCange: (String) -> Unit, onClick: () ->
             )
             Spacer(modifier = Modifier.fillMaxHeight(0.02f))
             NotDoFont.Caption2(
-                text = "나의 목표 목록 옆에 버튼을 눌러\n반복 설정을 누르면 설정되요.",
+                text = "나의 목표 목록 옆에 버튼을 눌러\n반복 설정을 누르면 설정돼요.",
                 color = NotDoColor.Gray500,
                 modifier = Modifier.fillMaxWidth()
             )
