@@ -7,8 +7,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.notdo.feature_ui_main.ui.component.TodayDoBar
-import com.notdo.feature_ui_main.ui.component.TodoInputDialog
+import com.notdo.feature_ui_main.ui.component.todaydo.TodayDoBar
+import com.notdo.feature_ui_main.ui.component.dialog.TodoInputDialog
 
 @Composable
 fun MainScreen(navController: NavController) {

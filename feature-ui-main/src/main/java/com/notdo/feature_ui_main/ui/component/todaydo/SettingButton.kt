@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_main.ui.component
+package com.notdo.feature_ui_main.ui.component.todaydo
 
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable

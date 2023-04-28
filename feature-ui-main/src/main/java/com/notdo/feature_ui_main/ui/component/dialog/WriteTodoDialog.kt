@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_main.ui.component
+package com.notdo.feature_ui_main.ui.component.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

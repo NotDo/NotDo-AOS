@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_main.ui.component
+package com.notdo.feature_ui_main.ui.component.todaydo
 
 import androidx.compose.runtime.Composable
 import com.notdo.util_ui.color.NotDoColor

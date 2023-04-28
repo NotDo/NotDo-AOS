@@ -1,4 +1,4 @@
-package com.notdo.feature_ui_main.ui.component
+package com.notdo.feature_ui_main.ui.component.todaydo
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -30,7 +30,8 @@ fun TodayDoBar() {
                 .background(NotDoColor.Black)
         ) {
             Row(
-                modifier = Modifier.align(Alignment.CenterStart)
+                modifier = Modifier.align(Alignment.CenterStart),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Spacer(modifier = Modifier.size(12.dp))
                 NotDoCheckBox {
