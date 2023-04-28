@@ -31,7 +31,7 @@ fun TodoInputDialog(
         ) {
             Column(
                 modifier = Modifier
-                    .fillMaxWidth(0.9f)
+                    .fillMaxWidth(0.85f)
                     .fillMaxHeight(0.51f)
                     .clip(RoundedCornerShape(10.dp))
                     .background(NotDoColor.White),
