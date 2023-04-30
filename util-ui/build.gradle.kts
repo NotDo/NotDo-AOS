@@ -54,7 +54,7 @@ dependencies {
     implementation(Dependency.Compose.COMPOSE_TOOLING)
     implementation(Dependency.Compose.COMPOSE_MATERIAL)
     implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL)
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.17.0")
+    implementation(Dependency.Library.SYSTEM_UI_CONTROLLER)
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
