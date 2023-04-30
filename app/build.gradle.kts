@@ -59,6 +59,7 @@ dependencies {
     implementation(project(":feature-ui-signin"))
     implementation(project(":feature-ui-main"))
 
+
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
     implementation(Dependency.Compose.ACTIVITY_COMPOSE)
