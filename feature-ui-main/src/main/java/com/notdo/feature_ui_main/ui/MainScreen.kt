@@ -7,7 +7,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.notdo.feature_ui_main.ui.component.TodoInputDialog
+import com.notdo.feature_ui_main.ui.component.todaydo.TodayDoBar
+import com.notdo.feature_ui_main.ui.component.dialog.TodoInputDialog
 
 @Composable
 fun MainScreen(navController: NavController) {
@@ -15,15 +16,16 @@ fun MainScreen(navController: NavController) {
         mutableStateOf(true)
     }
 
+    TodoInputDialog(visible = visible) {
+        //TODO 로컬 저장 로직
+        visible = false
+    }
+
     Column(
-        modifier = Modifier
-            .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        TodoInputDialog(visible = visible) {
-            //TODO 로컬 저장 로직
-            visible = false
-        }
+        TodayDoBar()
     }
 }
