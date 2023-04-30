@@ -37,6 +37,8 @@ object Dependency {
         const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
         const val ORBIT = "org.orbit-mvi:orbit-viewmodel:${Versions.ORBIT}"
         const val ORBIT_COMPOSE = "org.orbit-mvi:orbit-compose:${Versions.ORBIT}"
+        const val SYSTEM_UI_CONTROLLER =
+            "com.google.accompanist:accompanist-systemuicontroller:${Versions.SYSTEM_UI_CONTROLLER}"
     }
 
     object Google {
