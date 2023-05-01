@@ -1,6 +1,7 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.KAPT)
 }
 
 @Suppress("UnstableApiUsage")
@@ -42,4 +43,11 @@ dependencies {
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
+
+    //Room
+    implementation(Dependency.Library.ROOM_RUNTIME)
+    implementation(Dependency.Library.ROOM_KTX)
+    annotationProcessor(Dependency.Library.ROOM_COMPILER)
+    kapt(Dependency.Library.ROOM_COMPILER)
+    testImplementation(Dependency.Test.ROOM_TESTING)
 }

@@ -31,4 +31,5 @@ object Versions {
     const val COIL = "1.3.2"
     const val ORBIT = "4.6.1"
     const val SYSTEM_UI_CONTROLLER = "0.17.0"
+    const val ROOM = "2.5.0"
 }

@@ -53,4 +53,11 @@ dependencies {
     //Retrofit
     implementation(Dependency.Library.RETROFIT)
     implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
+
+    //Room
+    implementation(Dependency.Library.ROOM_RUNTIME)
+    implementation(Dependency.Library.ROOM_KTX)
+    annotationProcessor(Dependency.Library.ROOM_COMPILER)
+    kapt(Dependency.Library.ROOM_COMPILER)
+    testImplementation(Dependency.Test.ROOM_TESTING)
 }
