@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import java.time.LocalDateTime
-import java.util.UUID
+import java.time.LocalDate
+import java.util.*
 
 @Entity(
     tableName = "History",
@@ -22,7 +22,7 @@ data class HistoryEntity(
     @ColumnInfo(name = "isComplete")
     val isComplete: String,
     @ColumnInfo(name = "createdAt")
-    val createdAt: LocalDateTime,
+    val createdAt: LocalDate,
     @ColumnInfo(name = "categoryId")
     val categoryId: UUID,
     @ColumnInfo(name = "notToDoId")
