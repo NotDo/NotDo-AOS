@@ -25,5 +25,5 @@ data class ToDoEntity(
     @ColumnInfo(name = "isRepeat")
     val isRepeat: Boolean,
     @ColumnInfo(name = "uuid")
-    val uuid: UUID
+    val userId: UUID
 )
