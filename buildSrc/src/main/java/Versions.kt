@@ -7,7 +7,7 @@ object Versions {
     const val HILT = "2.44"
 
     const val COMPILESDK = 33
-    const val MINSDK = 24
+    const val MINSDK = 26
     const val TARGETSDK = 33
 
     val JAVAVERSION = JavaVersion.VERSION_1_8
