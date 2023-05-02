@@ -39,6 +39,9 @@ object Dependency {
         const val ORBIT_COMPOSE = "org.orbit-mvi:orbit-compose:${Versions.ORBIT}"
         const val SYSTEM_UI_CONTROLLER =
             "com.google.accompanist:accompanist-systemuicontroller:${Versions.SYSTEM_UI_CONTROLLER}"
+        const val ROOM_RUNTIME = "androidx.room:room-runtime:${Versions.ROOM}"
+        const val ROOM_KTX = "androidx.room:room-ktx:${Versions.ROOM}"
+        const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
     }
 
     object Google {
@@ -53,6 +56,7 @@ object Dependency {
         const val ANDROID_JUNIT = "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"
         const val ESPRESSO = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO}"
         const val ORBIT_TEST = "org.orbit-mvi:orbit-test:${Versions.ORBIT}"
+        const val ROOM_TESTING = "androidx.room:room-testing:${Versions.ROOM}"
     }
 
     object ComposeTest {
