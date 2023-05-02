@@ -21,9 +21,9 @@ data class ToDoEntity(
     @ColumnInfo(name = "content")
     val content: String,
     @ColumnInfo(name = "isComplete")
-    val isComplete: String,
+    val isComplete: Boolean,
     @ColumnInfo(name = "isRepeat")
-    val isRepeat: String,
+    val isRepeat: Boolean,
     @ColumnInfo(name = "uuid")
     val uuid: UUID
 )

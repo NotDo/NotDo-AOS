@@ -20,7 +20,7 @@ data class HistoryEntity(
     @PrimaryKey
     val id: UUID,
     @ColumnInfo(name = "isComplete")
-    val isComplete: String,
+    val isComplete: Boolean,
     @ColumnInfo(name = "createdAt")
     val createdAt: LocalDate,
     @ColumnInfo(name = "categoryId")
