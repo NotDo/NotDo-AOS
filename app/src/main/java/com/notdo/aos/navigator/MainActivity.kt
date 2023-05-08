@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.notdo.feature_ui_findpassword.navigator.findPasswordNavigator
 import com.notdo.feature_ui_intro.navigator.introNavigator
 import com.notdo.feature_ui_main.navigator.mainNavigator
 import com.notdo.feature_ui_signin.navigator.signInNavigator
@@ -19,13 +20,15 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
 
             NavHost(
-                navController = navController, startDestination = NotDoRoutes.MAIN_ROUTE
+                navController = navController, startDestination = NotDoRoutes.INTRO_ROUTE
             ) {
                 introNavigator(navController = navController)
 
                 signUpNavigator(navController = navController)
 
                 signInNavigator(navController = navController)
+
+                findPasswordNavigator(navController = navController)
 
                 mainNavigator(navController = navController)
             }
