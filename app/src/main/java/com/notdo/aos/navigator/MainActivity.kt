@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
 
             NavHost(
-                navController = navController, startDestination = NotDoRoutes.MAIN_ROUTE
+                navController = navController, startDestination = NotDoRoutes.INTRO_ROUTE
             ) {
                 introNavigator(navController = navController)
 
