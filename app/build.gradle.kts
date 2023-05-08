@@ -57,6 +57,7 @@ dependencies {
     implementation(project(":feature-ui-intro"))
     implementation(project(":feature-ui-signup"))
     implementation(project(":feature-ui-signin"))
+    implementation(project(":feature-ui-findpassword"))
     implementation(project(":feature-ui-main"))
 
 
