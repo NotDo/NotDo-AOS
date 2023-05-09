@@ -35,7 +35,7 @@ fun EmailInputScreen(
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         NotDoTextField(
             text = text,
-            labelText = "이메싱",
+            labelText = "이메일",
             hintText = "가입하신 이메일을 입력해주세요.",
             isError = isError,
             errorMsg = "이메일 형식에 맞게 입력해 주세요."
@@ -55,6 +55,7 @@ fun EmailInputScreen(
             isActivation = text != ""
         ) {
             isError = text.isEmailPattern()
+            //TODO 이메일 인증 요청 로직
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.06f))
     }
