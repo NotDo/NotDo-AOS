@@ -10,6 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_ui.color.NotDoColor
 import com.notdo.util_ui.component.GreetingsNotDoView
 import com.notdo.util_ui.component.NormalHeader
@@ -55,7 +56,6 @@ fun SignInScreen(
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
         GreetingsNotDoView(text = "낫두에 다시 \n오신걸 환영해요!")
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-        Spacer(modifier = Modifier.size(10.dp))
         NotDoTextField(
             text = email,
             labelText = "이메일",
@@ -83,7 +83,7 @@ fun SignInScreen(
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.notDoClickable { /*TODO 비번찾기 페이지로 이동로직*/ }
+                modifier = Modifier.notDoClickable { navController.navigate(NotDoRoutes.FIND_PASSWORD_ROUTE) }
             ) {
                 NotDoFont.Caption1(text = "비밀번호를 잊으셨나요?")
                 Spacer(modifier = Modifier.size(6.dp))
