@@ -148,6 +148,7 @@ fun NotDoTextField(
     }
 }
 
+@OptIn(ExperimentalTextApi::class)
 @Composable
 fun EmailCodeCheckTextField(
     text: String,
@@ -192,17 +193,36 @@ fun EmailCodeCheckTextField(
                 errorBorderColor = Color.Transparent
             ),
             placeholder = {
-                NotDoFont.Body(
+                Text(
                     text = "4자리 숫자를 입력해 주세요.",
-                    fontWeight = FontWeight.Normal,
-                    color = NotDoColor.Gray400
+                    style = TextStyle(
+                        fontFamily = pretendardFamily,
+                        fontWeight = FontWeight.Normal,
+                        color = NotDoColor.Gray500,
+                        fontSize = 14.sp,
+                        lineHeight = 20.sp,
+                        lineHeightStyle = LineHeightStyle(
+                            alignment = LineHeightStyle.Alignment.Center,
+                            trim = LineHeightStyle.Trim.FirstLineTop
+                        ),
+                        platformStyle = PlatformTextStyle(
+                            false
+                        )
+                    )
                 )
             },
             textStyle = TextStyle(
                 fontFamily = pretendardFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
-                lineHeight = 20.sp
+                lineHeight = 20.sp,
+                lineHeightStyle = LineHeightStyle(
+                    alignment = LineHeightStyle.Alignment.Center,
+                    trim = LineHeightStyle.Trim.FirstLineTop
+                ),
+                platformStyle = PlatformTextStyle(
+                    false
+                )
             ),
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true,

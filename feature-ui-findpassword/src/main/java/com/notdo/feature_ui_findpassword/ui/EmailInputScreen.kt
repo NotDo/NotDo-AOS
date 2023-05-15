@@ -5,6 +5,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_kotlin.format.isEmailPattern
 import com.notdo.util_ui.component.GreetingsNotDoView
 import com.notdo.util_ui.component.NormalHeader
@@ -55,6 +56,7 @@ fun EmailInputScreen(
             isActivation = text != ""
         ) {
             isError = text.isEmailPattern()
+            navController.navigate(NotDoRoutes.FindPassword.EMAIL_CODE_CHECK_SCREEN)
             //TODO 이메일 인증 요청 로직
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.06f))

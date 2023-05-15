@@ -22,6 +22,6 @@ fun GreetingsNotDoView(text: String) {
             modifier = Modifier.fillMaxWidth(0.2f)
         )
         Spacer(modifier = Modifier.size(20.dp))
-        NotDoFont.Hedline1(text = text, fontWeight = FontWeight.SemiBold)
+        NotDoFont.Hedline2(text = text, fontWeight = FontWeight.SemiBold)
     }
 }
