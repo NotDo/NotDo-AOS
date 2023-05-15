@@ -49,6 +49,7 @@ dependencies {
     implementation(project(":navigator"))
     implementation(project(":util-ui"))
     implementation(project(":util-kotlin"))
+    implementation(project(":util-network"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
