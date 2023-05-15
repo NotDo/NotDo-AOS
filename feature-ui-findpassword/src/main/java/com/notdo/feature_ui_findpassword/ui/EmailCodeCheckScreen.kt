@@ -60,6 +60,7 @@ fun EmailCodeCheckScreen(
             onReSendButtonClick = {
                 countDownTimer.cancel()
                 time = 300
+                isError = false
                 countDownTimer = object : CountDownTimer((time * 1000).toLong(), 1000) {
                     override fun onTick(millisUntilFinished: Long) {
                         time = (millisUntilFinished / 1000).toInt()
