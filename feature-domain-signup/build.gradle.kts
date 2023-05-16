@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":util-network"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
