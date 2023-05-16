@@ -1,6 +1,7 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    kotlin(Dependency.Gradle.KAPT)
 }
 
 @Suppress("UnstableApiUsage")
@@ -69,4 +70,8 @@ dependencies {
     implementation(Dependency.Library.ORBIT)
     implementation(Dependency.Library.ORBIT_COMPOSE)
     testImplementation(Dependency.Test.ORBIT_TEST)
+
+    //Hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
 }
