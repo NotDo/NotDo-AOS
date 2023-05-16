@@ -38,6 +38,7 @@ android {
 
 dependencies {
     implementation(project(":feature-domain-main"))
+    implementation(project(":feature-domain-signup"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)

@@ -1,5 +1,6 @@
 package com.notdo.di.module
 
+import com.notdo.feature_domain_signup.data.remote.network.api.SignUpAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -44,5 +45,11 @@ object NetworkModule {
     @Singleton
     fun provideConverterFactory(): GsonConverterFactory {
         return GsonConverterFactory.create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSignUpService(retrofit: Retrofit): SignUpAPI {
+        return retrofit.create(SignUpAPI::class.java)
     }
 }

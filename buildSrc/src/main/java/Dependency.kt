@@ -4,6 +4,7 @@ object Dependency {
         const val LIBRARY = "com.android.library"
         const val KOTLIN = "org.jetbrains.kotlin.android"
         const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
+        const val KAPT = "kapt"
     }
 
     object Plugins {
@@ -34,6 +35,9 @@ object Dependency {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val RETROFIT_GSON_CONVERTER =
             "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+        const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
+        const val OKHTTP_LOGGING_INTERCEPTOR =
+            "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
         const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
         const val ORBIT = "org.orbit-mvi:orbit-viewmodel:${Versions.ORBIT}"
         const val ORBIT_COMPOSE = "org.orbit-mvi:orbit-compose:${Versions.ORBIT}"
