@@ -7,7 +7,6 @@ import javax.inject.Inject
 class SignUpUseCase @Inject constructor(
     private val repository: SignUpRepository
 ) {
-    suspend operator fun invoke(body: UserAccountInfoModel) = kotlin.runCatching {
+    suspend operator fun invoke(body: UserAccountInfoModel) =
         repository.signUp(body = body)
-    }
 }
