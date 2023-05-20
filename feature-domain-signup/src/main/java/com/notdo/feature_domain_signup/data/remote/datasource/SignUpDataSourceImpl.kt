@@ -30,11 +30,11 @@ class SignUpDataSourceImpl @Inject constructor(
                         )
                     )
                 } catch (e: IOException) {
-                    e.printStackTrace()
+                    throw e
                 }
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            throw e
         } as Unit
     }.flowOn(Dispatchers.IO)
 }

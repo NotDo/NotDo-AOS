@@ -6,4 +6,6 @@ sealed class SignUpSideEffect {
     object RegularExpressionException : SignUpSideEffect()
 
     object UserAreadyExist : SignUpSideEffect()
+
+    object UnknownException : SignUpSideEffect()
 }
