@@ -1,6 +1,7 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.HILT_PLUGIN)
     kotlin(Dependency.Gradle.KAPT)
 }
 
@@ -37,7 +38,6 @@ android {
 
 dependencies {
     implementation(project(":util-network"))
-    implementation(project(":feature-ui-signup"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)

@@ -1,15 +1,17 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Dependency.Gradle.LIBRARY)
+    id(Dependency.Gradle.KOTLIN)
+    kotlin(Dependency.Gradle.KAPT)
 }
 
+@Suppress("UnstableApiUsage")
 android {
     namespace = "com.notdo.feature_data_signup"
-    compileSdk = 33
+    compileSdk = Versions.COMPILESDK
 
     defaultConfig {
-        minSdk = 26
-        targetSdk = 33
+        minSdk = Versions.MINSDK
+        targetSdk = Versions.TARGETSDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -25,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Versions.JAVAVERSION
+        targetCompatibility = Versions.JAVAVERSION
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -34,11 +36,21 @@ android {
 }
 
 dependencies {
+    implementation(project(":util-network"))
+    implementation(project(":feature-domain-signup"))
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Dependency.AndroidX.CORE_KTX)
+    implementation(Dependency.AndroidX.APPCOMPAT)
+    implementation(Dependency.Google.ANDROID_MATERIAL)
+    testImplementation(Dependency.Test.JUNIT)
+    androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
+    androidTestImplementation(Dependency.Test.ESPRESSO)
+
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
+    implementation(Dependency.Library.RETROFIT)
+    implementation(Dependency.Library.OKHTTP)
+    implementation(Dependency.Library.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
 }
