@@ -54,8 +54,12 @@ android {
 
 dependencies {
     implementation(project(":navigator"))
-    implementation(project(":feature-ui-intro"))
+
+    //signup
     implementation(project(":feature-ui-signup"))
+    implementation(project(":feature-domain-signup"))
+    
+    implementation(project(":feature-ui-intro"))
     implementation(project(":feature-ui-signin"))
     implementation(project(":feature-ui-findpassword"))
     implementation(project(":feature-ui-main"))

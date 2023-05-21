@@ -12,7 +12,9 @@ import com.notdo.feature_ui_main.navigator.mainNavigator
 import com.notdo.feature_ui_signin.navigator.signInNavigator
 import com.notdo.feature_ui_signup.navigator.signUpNavigator
 import com.notdo.navigator.NotDoRoutes
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

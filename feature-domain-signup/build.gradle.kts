@@ -37,6 +37,7 @@ android {
 
 dependencies {
     implementation(project(":util-network"))
+    implementation(project(":feature-ui-signup"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
