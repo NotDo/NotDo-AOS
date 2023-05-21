@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.postSideEffect
+import org.orbitmvi.orbit.syntax.simple.reduce
 import org.orbitmvi.orbit.viewmodel.container
 import javax.inject.Inject
 
@@ -41,6 +42,24 @@ class SignUpViewModel @Inject constructor(
             }.onFailure {
                 postSideEffect(SignUpSideEffect.UnknownException)
             }
+        }
+    }
+
+    fun setEmailState(email: String) = intent {
+        reduce {
+            state.copy(email = email)
+        }
+    }
+
+    fun setPasswordState(password: String) = intent {
+        reduce {
+            state.copy(password = password)
+        }
+    }
+
+    fun setNickname(nickname: String) = intent {
+        reduce {
+            state.copy(nickname = nickname)
         }
     }
 
