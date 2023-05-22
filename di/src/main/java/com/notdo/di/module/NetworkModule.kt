@@ -1,6 +1,6 @@
 package com.notdo.di.module
 
-import com.notdo.feature_domain_signup.data.remote.network.api.SignUpAPI
+import com.notdo.feature_data_signup.data.remote.network.api.SignUpAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

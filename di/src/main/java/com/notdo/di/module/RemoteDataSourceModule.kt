@@ -1,7 +1,7 @@
 package com.notdo.di.module
 
-import com.notdo.feature_domain_signup.data.remote.datasource.SignUpDataSource
-import com.notdo.feature_domain_signup.data.remote.datasource.SignUpDataSourceImpl
+import com.notdo.feature_data_signup.data.remote.datasource.SignUpDataSource
+import com.notdo.feature_data_signup.data.remote.datasource.SignUpDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

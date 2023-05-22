@@ -1,4 +1,4 @@
-package com.notdo.feature_domain_signup.data.remote.dto.res
+package com.notdo.feature_data_signup.data.remote.dto.res
 
 import com.notdo.feature_domain_signup.domain.model.res.TokenInfoModel
 import java.time.LocalDateTime

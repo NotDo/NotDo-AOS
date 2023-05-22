@@ -37,9 +37,13 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature-domain-main"))
+    //signup
+    implementation(project(":feature-data-signup"))
     implementation(project(":feature-domain-signup"))
-    implementation(project(":feature-ui-signup"))
+
+    //main
+    implementation(project(":feature-domain-main"))
+
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)

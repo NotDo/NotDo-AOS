@@ -58,7 +58,8 @@ dependencies {
     //signup
     implementation(project(":feature-ui-signup"))
     implementation(project(":feature-domain-signup"))
-    
+    implementation(project(":feature-data-signup"))
+
     implementation(project(":feature-ui-intro"))
     implementation(project(":feature-ui-signin"))
     implementation(project(":feature-ui-findpassword"))

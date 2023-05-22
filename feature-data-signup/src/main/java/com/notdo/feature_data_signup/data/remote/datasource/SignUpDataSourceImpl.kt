@@ -1,8 +1,8 @@
-package com.notdo.feature_domain_signup.data.remote.datasource
+package com.notdo.feature_data_signup.data.remote.datasource
 
-import com.notdo.feature_domain_signup.data.remote.dto.req.UserAccountInfoDTO
-import com.notdo.feature_domain_signup.data.remote.dto.res.TokenInfoDTO
-import com.notdo.feature_domain_signup.data.remote.network.api.SignUpAPI
+import com.notdo.feature_data_signup.data.remote.dto.req.UserAccountInfoDTO
+import com.notdo.feature_data_signup.data.remote.dto.res.TokenInfoDTO
+import com.notdo.feature_data_signup.data.remote.network.api.SignUpAPI
 import com.notdo.util_network.ApiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

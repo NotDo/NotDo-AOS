@@ -1,8 +1,8 @@
-package com.notdo.feature_domain_signup.data.repository
+package com.notdo.feature_data_signup.data.repository
 
-import com.notdo.feature_domain_signup.data.remote.datasource.SignUpDataSource
-import com.notdo.feature_domain_signup.data.remote.dto.req.UserAccountInfoDTO
-import com.notdo.feature_domain_signup.data.remote.dto.res.toModel
+import com.notdo.feature_data_signup.data.remote.datasource.SignUpDataSource
+import com.notdo.feature_data_signup.data.remote.dto.req.UserAccountInfoDTO
+import com.notdo.feature_data_signup.data.remote.dto.res.toModel
 import com.notdo.feature_domain_signup.domain.model.req.UserAccountInfoModel
 import com.notdo.feature_domain_signup.domain.model.res.TokenInfoModel
 import com.notdo.feature_domain_signup.domain.repository.SignUpRepository
