@@ -1,6 +1,8 @@
 plugins {
     id(Dependency.Gradle.LIBRARY)
     id(Dependency.Gradle.KOTLIN)
+    id(Dependency.Plugins.HILT_PLUGIN)
+    kotlin(Dependency.Gradle.KAPT)
 }
 
 @Suppress("UnstableApiUsage")
@@ -47,8 +49,13 @@ android {
 
 dependencies {
     implementation(project(":navigator"))
+    implementation(project(":feature-domain-signup"))
+    implementation(project(":feature-data-signup"))
+
+    //util
     implementation(project(":util-ui"))
     implementation(project(":util-kotlin"))
+    implementation(project(":util-network"))
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE_KTX)
@@ -69,4 +76,9 @@ dependencies {
     implementation(Dependency.Library.ORBIT)
     implementation(Dependency.Library.ORBIT_COMPOSE)
     testImplementation(Dependency.Test.ORBIT_TEST)
+
+    //Hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    implementation(Dependency.AndroidX.HILT_COMPOSE_NAV)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
 }

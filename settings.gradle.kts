@@ -16,7 +16,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NotDoAos"
 include(":app")
-include(":di")
 include(":navigator")
 include(":util-ui")
 include(":util-db")
@@ -32,3 +31,4 @@ include(":feature-domain-main")
 include(":feature-ui-main")
 include(":feature-ui-findpassword")
 include(":feature-domain-findpassword")
+include(":feature-data-signup")

@@ -54,8 +54,13 @@ android {
 
 dependencies {
     implementation(project(":navigator"))
-    implementation(project(":feature-ui-intro"))
+
+    //signup
     implementation(project(":feature-ui-signup"))
+    implementation(project(":feature-domain-signup"))
+    implementation(project(":feature-data-signup"))
+
+    implementation(project(":feature-ui-intro"))
     implementation(project(":feature-ui-signin"))
     implementation(project(":feature-ui-findpassword"))
     implementation(project(":feature-ui-main"))
@@ -79,4 +84,8 @@ dependencies {
     //Hilt
     implementation(Dependency.Google.HILT_ANDROID)
     kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
+    //Retrofit
+    implementation(Dependency.Library.RETROFIT)
+    implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
 }

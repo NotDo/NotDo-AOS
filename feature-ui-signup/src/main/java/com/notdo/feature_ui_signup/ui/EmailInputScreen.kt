@@ -7,7 +7,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.notdo.feature_ui_signup.viewmodel.SignUpViewModel
 import com.notdo.navigator.NotDoRoutes
 import com.notdo.util_kotlin.format.isEmailPattern
 import com.notdo.util_ui.color.NotDoColor
@@ -19,7 +21,10 @@ import com.notdo.util_ui.font.NotDoFont
 import com.notdo.util_ui.modifier.notDoClickable
 
 @Composable
-fun EmailInputScreen(navController: NavController) {
+fun EmailInputScreen(
+    navController: NavController,
+    signUpViewModel: SignUpViewModel = hiltViewModel()
+) {
     var email by remember {
         mutableStateOf("")
     }

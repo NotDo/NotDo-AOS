@@ -19,6 +19,7 @@ object Dependency {
         const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
         const val LIFECYCLE_VIEWMODEL =
             "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_VIEWMODEL}"
+        const val HILT_COMPOSE_NAV = "androidx.hilt:hilt-navigation-compose:${Versions.HILT_COMPOSE_NAV}"
     }
 
     object Compose {
