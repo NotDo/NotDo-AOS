@@ -1,4 +1,4 @@
-package com.notdo.di.module
+package com.notdo.aos.module
 
 import com.notdo.feature_data_signup.data.remote.datasource.SignUpDataSource
 import com.notdo.feature_data_signup.data.remote.datasource.SignUpDataSourceImpl

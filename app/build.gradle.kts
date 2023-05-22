@@ -84,4 +84,8 @@ dependencies {
     //Hilt
     implementation(Dependency.Google.HILT_ANDROID)
     kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
+    //Retrofit
+    implementation(Dependency.Library.RETROFIT)
+    implementation(Dependency.Library.RETROFIT_GSON_CONVERTER)
 }

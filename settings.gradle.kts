@@ -16,7 +16,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NotDoAos"
 include(":app")
-include(":di")
 include(":navigator")
 include(":util-ui")
 include(":util-db")

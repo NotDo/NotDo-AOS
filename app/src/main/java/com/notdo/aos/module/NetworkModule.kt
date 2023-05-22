@@ -1,4 +1,4 @@
-package com.notdo.di.module
+package com.notdo.aos.module
 
 import com.notdo.feature_data_signup.data.remote.network.api.SignUpAPI
 import dagger.Module
